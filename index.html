@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://polyfill.io https://*.vercel-insights.com https://*.vercel-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.vercel-insights.com https://*.vercel-analytics.com; frame-ancestors 'none';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()"
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
     
     <!-- SEO Meta Tags -->
     <title>Rian Cavalcante | Desenvolvedor de Automação com IA | Python & Inteligência Artificial</title>
@@ -71,10 +71,12 @@
     <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/project-cards-enhanced.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/project-cards-enhanced.css">
     </noscript>
     
     <!-- Schema.org Structured Data (JSON-LD) -->
@@ -230,8 +232,9 @@
                 </div>
                 
                 <div class="projects__grid">
-                    <!-- Project Card 1 -->
+                    <!-- Project Card 1 - IA -->
                     <article class="project-card">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E🤖%3C/text%3E%3C/svg%3E" 
                                  alt="Assistente Virtual Inteligente" 
@@ -249,22 +252,23 @@
                                 <span class="tag">NLP</span>
                                 <span class="tag">FastAPI</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto Assistente Virtual">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 2 -->
+                    <!-- Project Card 2 - IA -->
                     <article class="project-card">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E📊%3C/text%3E%3C/svg%3E" 
                                  alt="Análise Preditiva de Dados" 
@@ -282,22 +286,23 @@
                                 <span class="tag">Pandas</span>
                                 <span class="tag">Scikit-learn</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto Análise Preditiva">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 3 -->
+                    <!-- Project Card 3 - IA -->
                     <article class="project-card">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E🔄%3C/text%3E%3C/svg%3E" 
                                  alt="Automação de Processos com IA" 
@@ -315,16 +320,16 @@
                                 <span class="tag">PyAutoGUI</span>
                                 <span class="tag">Computer Vision</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto Automação de Processos">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>
@@ -341,10 +346,11 @@
                 </div>
                 
                 <div class="projects__grid">
-                    <!-- Project Card 1 -->
+                    <!-- Project Card 1 - Programação -->
                     <article class="project-card project-card--programming">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E💻%3C/text%3E%3C/svg%3E" 
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232A4555' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E💻%3C/text%3E%3C/svg%3E" 
                                  alt="Sistema de Gestão Web" 
                                  loading="lazy">
                         </div>
@@ -360,24 +366,25 @@
                                 <span class="tag tag--programming">PostgreSQL</span>
                                 <span class="tag tag--programming">React</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto Sistema de Gestão">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 2 -->
+                    <!-- Project Card 2 - Programação -->
                     <article class="project-card project-card--programming">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E🔌%3C/text%3E%3C/svg%3E" 
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232A4555' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E🔌%3C/text%3E%3C/svg%3E" 
                                  alt="API RESTful Escalável" 
                                  loading="lazy">
                         </div>
@@ -393,24 +400,25 @@
                                 <span class="tag tag--programming">Redis</span>
                                 <span class="tag tag--programming">Docker</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto API RESTful">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>
                     
-                    <!-- Project Card 3 -->
+                    <!-- Project Card 3 - Programação -->
                     <article class="project-card project-card--programming">
+                        <span class="project-card__badge">Em breve</span>
                         <div class="project-card__image">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E⚙️%3C/text%3E%3C/svg%3E" 
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%232A4555' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E⚙️%3C/text%3E%3C/svg%3E" 
                                  alt="Ferramenta CLI de Produtividade" 
                                  loading="lazy">
                         </div>
@@ -426,16 +434,16 @@
                                 <span class="tag tag--programming">Rich</span>
                                 <span class="tag tag--programming">PyPI</span>
                             </div>
-                            <div class="project-card__actions">
-                                <a href="#" class="btn-link" aria-label="Ver detalhes do projeto Ferramenta CLI">
+                            <div class="project-card__actions project-card__actions--disabled">
+                                <span class="btn-link">
                                     Ver Detalhes
                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </a>
-                                <a href="#" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub">
+                                </span>
+                                <span class="btn-link btn-link--secondary">
                                     GitHub
-                                </a>
+                                </span>
                             </div>
                         </div>
                     </article>

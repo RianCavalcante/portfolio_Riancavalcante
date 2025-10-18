@@ -1,0 +1,96 @@
+<!-- 
+    TEMPLATE DE CARD DE PROJETO - PORTFOLIO RIAN CAVALCANTE
+    
+    Use este template para adicionar novos projetos.
+    Substitua os valores entre [COLCHETES] pelas informações reais.
+-->
+
+<article class="project-card">
+    <!-- Badge "Em breve" - Remover quando o projeto estiver pronto -->
+    <span class="project-card__badge">Em breve</span>
+    
+    <!-- Imagem do Projeto -->
+    <div class="project-card__image">
+        <!-- OPÇÃO 1: Usar placeholder SVG (atual) -->
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect fill='%233A556B' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='48' fill='%23E8B86D'%3E[EMOJI]%3C/text%3E%3C/svg%3E" 
+             alt="[NOME DO PROJETO]" 
+             loading="lazy">
+        
+        <!-- OPÇÃO 2: Usar imagem real (quando disponível) -->
+        <!-- <img src="assets/images/projects/[nome-do-projeto].jpg" 
+             alt="[NOME DO PROJETO]" 
+             loading="lazy"> -->
+    </div>
+    
+    <!-- Conteúdo do Card -->
+    <div class="project-card__content">
+        <!-- Título do Projeto -->
+        <h3 class="project-card__title">[NOME DO PROJETO]</h3>
+        
+        <!-- Descrição -->
+        <p class="project-card__description">
+            [DESCRIÇÃO DO PROJETO - 2 a 3 linhas explicando o que o projeto faz e qual problema resolve]
+        </p>
+        
+        <!-- Tags de Tecnologias -->
+        <div class="project-card__tags">
+            <span class="tag">[TECH 1]</span>
+            <span class="tag">[TECH 2]</span>
+            <span class="tag">[TECH 3]</span>
+            <span class="tag">[TECH 4]</span>
+        </div>
+        
+        <!-- Ações - DESABILITADAS até ter links reais -->
+        <div class="project-card__actions project-card__actions--disabled">
+            <span class="btn-link">
+                Ver Detalhes
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <span class="btn-link btn-link--secondary">
+                GitHub
+            </span>
+        </div>
+        
+        <!-- QUANDO TIVER LINKS REAIS, use este código: -->
+        <!--
+        <div class="project-card__actions">
+            <a href="[URL_DETALHES]" class="btn-link" aria-label="Ver detalhes do projeto [NOME]">
+                Ver Detalhes
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+            <a href="[URL_GITHUB]" class="btn-link btn-link--secondary" aria-label="Ver código no GitHub" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+        </div>
+        -->
+        
+        <!-- Status do Projeto (opcional) -->
+        <div class="project-card__status">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+            </svg>
+            <span>Projeto ilustrativo</span>
+        </div>
+    </div>
+</article>
+
+<!--
+    INSTRUÇÕES PARA ATUALIZAR:
+    
+    1. Substitua [EMOJI] por um emoji relevante (🤖, 📊, 🔄, 💻, 🔌, ⚙️, etc)
+    2. Substitua [NOME DO PROJETO] pelo nome real
+    3. Substitua [DESCRIÇÃO DO PROJETO] pela descrição
+    4. Substitua [TECH 1], [TECH 2], etc pelas tecnologias usadas
+    5. Quando tiver imagem real, comente a OPÇÃO 1 e descomente a OPÇÃO 2
+    6. Quando tiver links reais:
+       - Remova o <span class="project-card__badge">Em breve</span>
+       - Remova a classe "project-card__actions--disabled"
+       - Troque <span> por <a> nos botões
+       - Adicione os href reais
+       - Remova o project-card__status se quiser
+-->
