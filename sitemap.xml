@@ -6,7 +6,7 @@
     
     <!-- Página Principal -->
     <url>
-        <loc>https://riancavalcante.com/</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
     
     <!-- Seção Hero -->
     <url>
-        <loc>https://riancavalcante.com/#hero</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#hero</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
@@ -22,7 +22,7 @@
     
     <!-- Seção Projetos IA -->
     <url>
-        <loc>https://riancavalcante.com/#projetos-ia</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#projetos-ia</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -30,7 +30,7 @@
     
     <!-- Seção Projetos Programação -->
     <url>
-        <loc>https://riancavalcante.com/#projetos-programacao</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#projetos-programacao</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -38,7 +38,7 @@
     
     <!-- Seção Sobre -->
     <url>
-        <loc>https://riancavalcante.com/#sobre</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#sobre</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -46,7 +46,7 @@
     
     <!-- Seção Serviços -->
     <url>
-        <loc>https://riancavalcante.com/#servicos</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#servicos</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -54,7 +54,7 @@
     
     <!-- Seção Contato -->
     <url>
-        <loc>https://riancavalcante.com/#contato</loc>
+        <loc>https://portfolio-riancavalcante-lxhj.vercel.app/#contato</loc>
         <lastmod>2025-01-18</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
