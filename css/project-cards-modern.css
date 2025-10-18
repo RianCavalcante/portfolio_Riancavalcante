@@ -37,9 +37,9 @@
 }
 
 .project-card:hover {
-    transform: translateY(-12px) scale(1.02);
+    transform: translateY(-8px);
     box-shadow: 
-        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 12px 24px rgba(0, 0, 0, 0.15),
         0 0 0 1px rgba(58, 85, 107, 0.1);
 }
 
@@ -127,26 +127,12 @@
 }
 
 /* ========================================
-   QUICK VIEW OVERLAY
+   QUICK VIEW OVERLAY - DESABILITADO
    ======================================== */
 
 .project-card__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(58, 85, 107, 0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity var(--transition-base);
-    z-index: 3;
-}
-
-.project-card:hover .project-card__overlay {
-    opacity: 1;
+    display: none !important;
+    /* Overlay desabilitado para não cobrir o conteúdo */
 }
 
 .project-card__overlay-content {
