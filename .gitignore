@@ -1,0 +1,20 @@
+# Arquivos de desenvolvimento
+.kiro/
+.vscode/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# Arquivos de ambiente (se houver)
+.env
+.env.local
+
+# Node modules (se usar no futuro)
+node_modules/
+
+# Arquivos de build (se usar no futuro)
+dist/
+build/

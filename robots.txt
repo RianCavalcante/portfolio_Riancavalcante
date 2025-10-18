@@ -1,0 +1,19 @@
+# robots.txt para riancavalcante.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://riancavalcante.com/sitemap.xml
+
+# Crawl-delay (opcional, ajuda a não sobrecarregar o servidor)
+Crawl-delay: 1
+
+# Bloquear arquivos desnecessários
+Disallow: /assets/
+Disallow: /*.json$
+Disallow: /*.md$
+
+# Permitir CSS e JS para renderização
+Allow: /css/
+Allow: /js/

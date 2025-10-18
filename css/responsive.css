@@ -1,0 +1,603 @@
+/* Responsive styles - Portfolio Rian Cavalcante */
+
+/* ========================================
+   HERO SECTION - RESPONSIVE
+   ======================================== */
+
+/* Tablet (768px e abaixo) */
+@media (max-width: 768px) {
+    .hero__title {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .hero__age {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero__role {
+        font-size: var(--font-size-xl);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .hero__cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Mobile (480px e abaixo) */
+@media (max-width: 480px) {
+    .hero__container {
+        padding-top: var(--spacing-2xl);
+        padding-bottom: var(--spacing-2xl);
+    }
+    
+    .hero__title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .hero__age {
+        display: block;
+        margin-left: 0;
+        margin-top: var(--spacing-xs);
+        font-size: var(--font-size-md);
+    }
+    
+    .hero__role {
+        font-size: var(--font-size-lg);
+    }
+    
+    .hero__subtitle {
+        font-size: var(--font-size-sm);
+    }
+}
+/* ========================================
+   NAVIGATION - RESPONSIVE
+   ======================================== */
+
+/* Tablet e Mobile (768px e abaixo) */
+@media (max-width: 768px) {
+    .navbar__toggle {
+        display: flex;
+    }
+    
+    .navbar__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--color-dark);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: var(--spacing-4xl) var(--spacing-xl);
+        gap: var(--spacing-md);
+        transition: right var(--transition-slow);
+        box-shadow: var(--shadow-2xl);
+    }
+    
+    .navbar__menu.active {
+        right: 0;
+    }
+    
+    .navbar__item {
+        width: 100%;
+    }
+    
+    .navbar__link {
+        width: 100%;
+        padding: var(--spacing-md);
+        font-size: var(--font-size-lg);
+    }
+    
+    .navbar__link::after {
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .navbar__link:hover::after,
+    .navbar__link.active::after {
+        width: 100%;
+    }
+}
+
+/* Mobile pequeno (480px e abaixo) */
+@media (max-width: 480px) {
+    .navbar__menu {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .navbar__logo {
+        font-size: var(--font-size-lg);
+    }
+}
+
+/* ========================================
+   PROJECTS SECTION - RESPONSIVE
+   ======================================== */
+
+/* Desktop grande (1280px e acima) */
+@media (min-width: 1280px) {
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile e Tablet pequeno (767px e abaixo) */
+@media (max-width: 767px) {
+    .projects {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .section-header {
+        margin-bottom: var(--spacing-2xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-3xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .projects__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .project-card__image {
+        height: 180px;
+    }
+    
+    .project-card__content {
+        padding: var(--spacing-lg);
+    }
+    
+    .project-card__title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .project-card__description {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Mobile pequeno (480px e abaixo) */
+@media (max-width: 480px) {
+    .projects {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .section-title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .section-subtitle {
+        font-size: var(--font-size-sm);
+    }
+    
+    .project-card__actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-sm);
+    }
+}
+
+/* ========================================
+   ABOUT SECTION - RESPONSIVE
+   ======================================== */
+
+/* Tablet e abaixo (768px) */
+@media (max-width: 768px) {
+    .about {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .about__card {
+        padding: var(--spacing-xl);
+    }
+    
+    .about__card-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .about__card-subtitle {
+        font-size: var(--font-size-base);
+    }
+    
+    .about__social {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .social-link {
+        justify-content: center;
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: var(--spacing-md);
+    }
+}
+
+/* Mobile (480px e abaixo) */
+@media (max-width: 480px) {
+    .about {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .about__content {
+        gap: var(--spacing-lg);
+    }
+    
+    .about__card {
+        padding: var(--spacing-lg);
+    }
+    
+    .about__icon {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .about__icon svg {
+        width: 24px;
+        height: 24px;
+    }
+    
+    .about__card-title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .about__text {
+        font-size: var(--font-size-sm);
+    }
+    
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-sm);
+    }
+    
+    .tech-item {
+        padding: var(--spacing-sm);
+    }
+    
+    .tech-item img {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* ========================================
+   SERVICES SECTION - RESPONSIVE
+   ======================================== */
+
+/* Desktop grande (1280px e acima) */
+@media (min-width: 1280px) {
+    .services__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Desktop médio (1024px a 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet (768px a 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile (767px e abaixo) */
+@media (max-width: 767px) {
+    .services {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .services__grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-xl);
+    }
+    
+    .service-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .service-card__icon {
+        width: 64px;
+        height: 64px;
+    }
+    
+    .service-card__icon svg {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .service-card__title {
+        font-size: var(--font-size-lg);
+    }
+    
+    .service-card__description {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Mobile pequeno (480px e abaixo) */
+@media (max-width: 480px) {
+    .services {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .service-card {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* ========================================
+   CONTACT SECTION - RESPONSIVE
+   ======================================== */
+
+/* Tablet e abaixo (768px) */
+@media (max-width: 768px) {
+    .contact {
+        padding: var(--spacing-3xl) 0;
+    }
+    
+    .contact__content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+    
+    .contact__form-wrapper {
+        padding: var(--spacing-xl);
+    }
+    
+    .contact__info-card {
+        padding: var(--spacing-xl);
+    }
+    
+    .contact__info-title {
+        font-size: var(--font-size-xl);
+    }
+}
+
+/* Mobile (480px e abaixo) */
+@media (max-width: 480px) {
+    .contact {
+        padding: var(--spacing-2xl) 0;
+    }
+    
+    .contact__content {
+        gap: var(--spacing-xl);
+    }
+    
+    .contact__form-wrapper {
+        padding: var(--spacing-lg);
+    }
+    
+    .contact__info-card {
+        padding: var(--spacing-lg);
+    }
+    
+    .contact__link {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .contact__link:hover {
+        transform: translateY(-4px);
+    }
+    
+    .contact__link-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contact__link-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* ========================================
+   GLOBAL RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+/* Container padding ajustado */
+@media (max-width: 1280px) {
+    .container {
+        padding: 0 var(--spacing-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+}
+
+/* Tipografia responsiva global */
+@media (max-width: 768px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Imagens responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Footer responsivo */
+footer {
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    background-color: var(--color-dark);
+    color: var(--color-gray-300);
+    font-size: var(--font-size-sm);
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: var(--spacing-xl) 0;
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ========================================
+   BREAKPOINT ESPECÍFICOS
+   ======================================== */
+
+/* Mobile pequeno (320px) */
+@media (max-width: 320px) {
+    .hero__title {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-xl);
+    }
+    
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-lg);
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Tablet landscape (1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-4xl) 0;
+    }
+}
+
+/* Desktop wide (1536px e acima) */
+@media (min-width: 1536px) {
+    .container {
+        max-width: var(--container-2xl);
+    }
+    
+    .section-title {
+        font-size: var(--font-size-5xl);
+    }
+}
+
+/* ========================================
+   UTILITY CLASSES RESPONSIVAS
+   ======================================== */
+
+/* Esconder em mobile */
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+}
+
+/* Esconder em desktop */
+@media (min-width: 769px) {
+    .hide-desktop {
+        display: none !important;
+    }
+}
+
+/* ========================================
+   ACESSIBILIDADE E PERFORMANCE
+   ======================================== */
+
+/* Reduzir animações para usuários que preferem */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Dark mode support (preparado para futuro) */
+@media (prefers-color-scheme: dark) {
+    /* Variáveis podem ser ajustadas aqui no futuro */
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .btn,
+    .navbar__link,
+    .project-card,
+    .service-card {
+        border-width: 3px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+    .navbar,
+    .hero__cta,
+    .contact__form,
+    footer {
+        display: none;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    .section-title {
+        page-break-after: avoid;
+    }
+    
+    .project-card,
+    .service-card {
+        page-break-inside: avoid;
+    }
+}

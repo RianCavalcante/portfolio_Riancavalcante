@@ -1,0 +1,16 @@
+# Arquivos de desenvolvimento
+.kiro/
+.vscode/
+
+# Documentação
+*.md
+!README.md
+
+# Arquivos de configuração local
+.htaccess
+
+# Arquivos temporários
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
