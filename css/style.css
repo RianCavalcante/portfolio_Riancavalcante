@@ -555,9 +555,12 @@ ol {
 
 .projects__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--spacing-2xl);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
     margin-top: var(--spacing-3xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ========================================
@@ -582,7 +585,7 @@ ol {
 
 .project-card__image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
     background-color: var(--color-gray-200);
 }
@@ -599,26 +602,31 @@ ol {
 }
 
 .project-card__content {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 .project-card__title {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
     font-weight: var(--font-weight-bold);
     color: var(--color-dark);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
     line-height: var(--line-height-snug);
 }
 
 .project-card__description {
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-sm);
     color: var(--color-text-light);
-    line-height: var(--line-height-relaxed);
-    margin-bottom: var(--spacing-lg);
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
     flex-grow: 1;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .project-card__tags {
@@ -1269,4 +1277,72 @@ footer p {
     html {
         scroll-behavior: auto;
     }
+}
+
+
+/* ========================================
+   CORREÇÕES DE LAYOUT - ADICIONADO 2025
+   ======================================== */
+
+/* Grid responsivo melhorado */
+@media (min-width: 1024px) {
+    .projects__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-xl);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .projects__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Garantir que cards não fiquem muito grandes */
+.project-card {
+    max-width: 100%;
+}
+
+/* Reduzir tamanho das tags */
+.tag {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+}
+
+/* Limitar descrição a 3 linhas */
+.project-card__description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Hover mais sutil */
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Garantir visibilidade dos botões do hero */
+.hero__cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero__cta .btn {
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: var(--color-light);
+    border: 2px solid var(--color-light);
+}
+
+.btn--secondary:hover {
+    background-color: var(--color-light);
+    color: var(--color-primary);
 }

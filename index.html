@@ -67,25 +67,57 @@
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.6;color:#1A1A1A;background-color:#FFFFFF;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}:root{--color-primary:#3A556B;--color-secondary:#E8B86D;--color-dark:#1A1A1A;--color-light:#FFFFFF;--color-gray-200:#E0E0E0;--font-size-base:1rem;--font-size-xl:1.5rem;--font-size-2xl:2rem;--font-size-5xl:3.5rem;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--spacing-sm:0.5rem;--spacing-md:1rem;--spacing-lg:1.5rem;--spacing-xl:2rem;--radius-lg:0.5rem;--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--transition-base:250ms ease-in-out;--z-index-fixed:1030}.skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:var(--color-light);padding:var(--spacing-sm) var(--spacing-md);text-decoration:none;z-index:1070}.skip-to-content:focus{top:0}.navbar{position:fixed;top:0;left:0;right:0;z-index:var(--z-index-fixed);background-color:rgba(26,26,26,0.95);backdrop-filter:blur(10px);box-shadow:var(--shadow-md)}.navbar__container{display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-md);max-width:1280px;margin:0 auto}.navbar__logo{font-size:var(--font-size-xl);font-weight:var(--font-weight-extrabold);color:var(--color-secondary);text-decoration:none}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--color-primary) 0%,#2A4555 100%);color:var(--color-light)}.hero__content{max-width:800px;margin:0 auto;text-align:center}.hero__title{font-size:var(--font-size-5xl);font-weight:var(--font-weight-extrabold);line-height:1.2;margin-bottom:var(--spacing-md);color:var(--color-light)}.hero__age{display:inline-block;font-size:var(--font-size-xl);color:var(--color-secondary);margin-left:var(--spacing-sm)}.hero__role{font-size:var(--font-size-2xl);font-weight:var(--font-weight-semibold);color:var(--color-secondary);margin-bottom:var(--spacing-lg)}.btn{display:inline-block;padding:var(--spacing-md) var(--spacing-xl);font-size:var(--font-size-base);font-weight:var(--font-weight-semibold);text-align:center;text-decoration:none;border-radius:var(--radius-lg);transition:all var(--transition-base);cursor:pointer;border:2px solid transparent}.btn--primary{background-color:var(--color-primary);color:var(--color-light);box-shadow:var(--shadow-md)}
     </style>
     
+    <!-- Correções Críticas -->
+    <style>
+        /* Garantir visibilidade dos botões */
+        .hero__cta, .hero__cta .btn, .btn--secondary {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Cards menores */
+        .projects__grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 1.5rem !important;
+        }
+        
+        .project-card__image {
+            height: 160px !important;
+        }
+        
+        .project-card__content {
+            padding: 1.5rem !important;
+        }
+        
+        .project-card__title {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .project-card__description {
+            font-size: 0.875rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        /* Desabilitar overlay */
+        .project-card__overlay {
+            display: none !important;
+        }
+        
+        /* Hover mais sutil */
+        .project-card:hover {
+            transform: translateY(-6px) !important;
+        }
+    </style>
+    
     <!-- Stylesheets - Carregamento assíncrono -->
-    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/animations.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/project-cards-enhanced.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/hero-enhanced.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/navbar-enhanced.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/project-cards-modern.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/fixes.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animations.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="stylesheet" href="css/project-cards-enhanced.css">
-        <link rel="stylesheet" href="css/hero-enhanced.css">
-        <link rel="stylesheet" href="css/navbar-enhanced.css">
-        <link rel="stylesheet" href="css/project-cards-modern.css">
-        <link rel="stylesheet" href="css/fixes.css">
-    </noscript>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/hero-enhanced.css">
+    <link rel="stylesheet" href="css/navbar-enhanced.css">
+
     
     <!-- Schema.org Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -223,9 +255,9 @@
                         Especialista em <strong>Python</strong> e <strong>automação com IA</strong>, 
                         transformando processos complexos em soluções inteligentes e eficientes.
                     </p>
-                    <div class="hero__cta">
-                        <a href="#projetos-ia" class="btn btn--primary">Ver Projetos</a>
-                        <a href="#contato" class="btn btn--secondary">Entre em Contato</a>
+                    <div class="hero__cta" style="opacity: 1 !important; visibility: visible !important;">
+                        <a href="#projetos-ia" class="btn btn--primary" style="opacity: 1 !important; visibility: visible !important;">Ver Projetos</a>
+                        <a href="#contato" class="btn btn--secondary" style="opacity: 1 !important; visibility: visible !important;">Entre em Contato</a>
                     </div>
                 </div>
             </div>
