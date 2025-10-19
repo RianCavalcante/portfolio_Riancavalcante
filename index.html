@@ -119,6 +119,7 @@
     <link rel="stylesheet" href="css/hero-enhanced.css?v=2.1.0">
     <link rel="stylesheet" href="css/navbar-enhanced.css?v=2.1.0">
     <link rel="stylesheet" href="css/magic-ui-effects.css?v=2.1.0">
+    <link rel="stylesheet" href="css/ai-projects-magic-ui.css?v=1.0.0">
 
     
     <!-- Schema.org Structured Data (JSON-LD) -->
@@ -267,17 +268,37 @@
         </section>
         
         <!-- Projects with AI Section -->
-        <section id="projetos-ia" class="projects projects--ai" aria-label="Projetos com Inteligência Artificial">
+        <section id="projetos-ia" class="projects projects--ai ai-projects-section" aria-label="Projetos com Inteligência Artificial">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-badge">🤖 IA & Machine Learning</span>
-                    <h2 class="section-title">Projetos com Inteligência Artificial</h2>
-                    <p class="section-subtitle">Transformando dados em inteligência, automatizando o futuro com soluções de IA de ponta</p>
+                    <span class="section-badge ai-shiny-text-auto">🤖 IA & Machine Learning</span>
+                    <h2 class="section-title ai-aurora-text-auto">Projetos com Inteligência Artificial</h2>
+                    <p class="section-subtitle ai-text-animate-auto" data-animation="blurInUp" data-duration="0.8" data-stagger="0.1">Transformando dados em inteligência, automatizando o futuro com soluções de IA de ponta</p>
+                </div>
+                
+                <!-- Estatísticas da seção -->
+                <div class="ai-statistics-container">
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="2000" data-delay="500" data-suffix="+">15</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Projetos Concluídos</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="2500" data-delay="800" data-suffix="+">25</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Tecnologias Utilizadas</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="1800" data-delay="1100">5</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Anos de Experiência</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="3000" data-delay="1400" data-suffix="k+">10</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Horas de Automação</span>
+                    </div>
                 </div>
                 
                 <div class="projects__grid">
-                    <!-- Project Card 1 - IA -->
-                    <article class="project-card project-card--ai border-beam">
+                    <!-- Project Card 1 - IA (Featured) -->
+                    <article class="project-card project-card--ai project-card--featured ai-project-card-auto" data-featured="true">
                         <span class="project-card__badge project-card__badge--ai neon-glow">🚀 IA Conversacional</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E🤖%3C/text%3E%3C/svg%3E" 
@@ -323,7 +344,7 @@
                     </article>
                     
                     <!-- Project Card 2 - IA -->
-                    <article class="project-card project-card--ai border-beam">
+                    <article class="project-card project-card--ai ai-project-card-auto">
                         <span class="project-card__badge project-card__badge--ml neon-glow">📈 Machine Learning</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E📊%3C/text%3E%3C/svg%3E" 
@@ -369,7 +390,7 @@
                     </article>
                     
                     <!-- Project Card 3 - IA -->
-                    <article class="project-card project-card--ai border-beam">
+                    <article class="project-card project-card--ai ai-project-card-auto">
                         <span class="project-card__badge project-card__badge--automation neon-glow">⚡ Automação IA</span>
                         <div class="project-card__image">
                             <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad3)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E⚡%3C/text%3E%3C/svg%3E" 
@@ -965,6 +986,30 @@
         }
     </script>
     -->
+    
+    <!-- AI Projects Configuration -->
+    <script src="js/ai-projects-config.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Performance Monitor -->
+    <script src="js/ai-projects-performance.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Particles Component -->
+    <script src="js/ai-particles-component.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Meteors Component -->
+    <script src="js/ai-meteors-component.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Text Components -->
+    <script src="js/ai-text-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Magic Card Components -->
+    <script src="js/ai-magic-card-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Interactive Components -->
+    <script src="js/ai-interactive-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Interactive Components -->
+    <script src="js/ai-interactive-components.js?v=1.0.0"></script>
     
     <!-- Vercel Analytics -->
     <script defer src="/_vercel/insights/script.js"></script>

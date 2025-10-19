@@ -1,0 +1,1678 @@
+/* ===================================
+   AI Projects Section - Magic UI Styles
+   ================================== */
+
+/* Variáveis CSS customizadas para Magic UI */
+:root {
+  /* Cores principais para componentes Magic UI */
+  --ai-magic-gradient-from: #9E7AFF;
+  --ai-magic-gradient-to: #FE8BBB;
+  --ai-magic-gradient-accent: #00D4FF;
+  --ai-magic-particle-color: rgba(158, 122, 255, 0.6);
+  --ai-magic-border-color: rgba(254, 139, 187, 0.8);
+  --ai-magic-neon-primary: #ff00aa;
+  --ai-magic-neon-secondary: #00FFF1;
+  
+  /* Cores de fundo e contraste */
+  --ai-magic-bg-dark: rgba(15, 23, 42, 0.95);
+  --ai-magic-bg-card: rgba(30, 41, 59, 0.8);
+  --ai-magic-text-primary: #ffffff;
+  --ai-magic-text-secondary: rgba(255, 255, 255, 0.8);
+  
+  /* Timing e durações para animações */
+  --ai-magic-animation-duration: 0.8s;
+  --ai-magic-animation-fast: 0.3s;
+  --ai-magic-animation-slow: 1.2s;
+  --ai-magic-stagger-delay: 0.1s;
+  --ai-magic-hover-duration: 0.2s;
+  
+  /* Tamanhos responsivos */
+  --ai-magic-card-size: clamp(280px, 30vw, 380px);
+  --ai-magic-card-height: clamp(320px, 35vh, 450px);
+  --ai-magic-particle-count: clamp(15, 3vw, 40);
+  --ai-magic-meteor-count: clamp(3, 1vw, 8);
+  
+  /* Espaçamentos */
+  --ai-magic-section-padding: clamp(2rem, 5vw, 4rem);
+  --ai-magic-card-gap: clamp(1rem, 2vw, 2rem);
+  --ai-magic-text-spacing: clamp(0.5rem, 1vw, 1rem);
+  
+  /* Bordas e raios */
+  --ai-magic-border-radius: 12px;
+  --ai-magic-border-width: 2px;
+  --ai-magic-shadow-blur: 20px;
+}
+
+/* Configurações para movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ai-magic-animation-duration: 0.01s;
+    --ai-magic-animation-fast: 0.01s;
+    --ai-magic-animation-slow: 0.01s;
+    --ai-magic-particle-count: 0;
+    --ai-magic-meteor-count: 0;
+  }
+  
+  /* Desabilita todas as animações Magic UI */
+  .ai-projects-section * {
+    animation-duration: 0.01s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01s !important;
+  }
+}
+
+/* Configurações para dispositivos móveis */
+@media (max-width: 768px) {
+  :root {
+    --ai-magic-card-size: clamp(260px, 85vw, 320px);
+    --ai-magic-card-height: clamp(280px, 40vh, 350px);
+    --ai-magic-particle-count: clamp(8, 2vw, 20);
+    --ai-magic-meteor-count: clamp(1, 0.5vw, 3);
+    --ai-magic-section-padding: clamp(1rem, 3vw, 2rem);
+    --ai-magic-card-gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  }
+}
+
+/* Container principal da seção AI Projects */
+.ai-projects-section {
+  position: relative;
+  min-height: 100vh;
+  padding: var(--ai-magic-section-padding);
+  background: linear-gradient(135deg, 
+    var(--ai-magic-bg-dark) 0%, 
+    rgba(30, 41, 59, 0.9) 50%, 
+    var(--ai-magic-bg-dark) 100%);
+  overflow: hidden;
+}
+
+/* Camada de fundo para efeitos ambientais */
+.ai-projects-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Canvas de partículas */
+.ai-particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+
+/* Otimizações para partículas */
+.ai-projects-background .ai-particles-canvas {
+  will-change: auto;
+  contain: layout style paint;
+  transform: translateZ(0);
+}
+
+/* Redução de partículas para performance */
+.ai-performance-reduced .ai-particles-canvas {
+  opacity: 0.4;
+}
+
+/* Desabilita partículas em movimento reduzido */
+.ai-reduced-motion .ai-particles-canvas {
+  display: none;
+}
+
+/* Container de meteoros */
+.ai-meteors-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* Meteoro individual */
+.ai-meteor {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  will-change: transform, opacity;
+  contain: layout style paint;
+}
+
+/* Cauda do meteoro */
+.ai-meteor-tail {
+  position: absolute;
+  pointer-events: none;
+  will-change: opacity;
+}
+
+/* Animação personalizada para meteoros */
+@keyframes ai-meteor-trail {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px) translateY(-100px);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px) translateY(100px);
+  }
+}
+
+/* Otimizações para meteoros */
+.ai-meteors-container .ai-meteor {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Redução de meteoros para performance */
+.ai-performance-reduced .ai-meteors-container {
+  opacity: 0.5;
+}
+
+.ai-performance-reduced .ai-meteor {
+  animation-duration: 2s !important;
+}
+
+/* Desabilita meteoros em movimento reduzido */
+.ai-reduced-motion .ai-meteors-container {
+  display: none;
+}
+
+/* Estilos para diferentes tamanhos de meteoro */
+.ai-meteor.small {
+  width: 0.5px;
+  height: 0.5px;
+}
+
+.ai-meteor.medium {
+  width: 1px;
+  height: 1px;
+}
+
+.ai-meteor.large {
+  width: 1.5px;
+  height: 1.5px;
+}
+
+/* Efeito de brilho sutil para meteoros */
+.ai-meteor::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: radial-gradient(circle, var(--ai-magic-gradient-from) 0%, transparent 70%);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* ===================================
+   Componentes de Texto Animado
+   ================================== */
+
+/* Aurora Text Animation */
+@keyframes ai-aurora-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ai-aurora-container {
+  position: relative;
+  display: inline-block;
+}
+
+.ai-aurora-text {
+  background: linear-gradient(135deg, #FF0080, #7928CA, #0070F3, #38bdf8, #9E7AFF, #FE8BBB, #FF0080);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ai-aurora-animation 10s ease infinite;
+  position: relative;
+  z-index: 1;
+}
+
+/* Animated Gradient Text */
+@keyframes ai-gradient-animation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ai-gradient-text {
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to), var(--ai-magic-gradient-from));
+  background-size: 300% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: ai-gradient-animation 3s ease infinite;
+}
+
+/* Number Ticker Styles */
+.ai-number-ticker {
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  color: var(--ai-magic-gradient-from);
+  transition: color 0.3s ease;
+}
+
+.ai-number-ticker.animating {
+  color: var(--ai-magic-gradient-to);
+}
+
+/* Text Animate Styles */
+.ai-text-animate {
+  overflow: hidden;
+}
+
+.ai-text-animate span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  filter: blur(10px);
+  transition: all 0.8s ease;
+  margin-right: 0.25em;
+}
+
+.ai-text-animate.animated span {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* Shimmer Text Animation */
+@keyframes ai-shimmer-animation {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.ai-shiny-text {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%);
+  background-size: 200% 100%;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: ai-shimmer-animation 2s ease infinite;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilos específicos para títulos da seção IA */
+.ai-projects-section .section-title.ai-aurora-text-auto {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ai-projects-section .section-subtitle.ai-text-animate-auto {
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--ai-magic-text-secondary);
+}
+
+/* Estilos para estatísticas animadas */
+.ai-statistics-container .ai-statistic-number {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+/* Estilos para badges e labels */
+.ai-projects-section .section-badge.ai-shiny-text-auto {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: rgba(158, 122, 255, 0.1);
+  border: 1px solid rgba(158, 122, 255, 0.3);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  backdrop-filter: blur(10px);
+}
+
+/* Fallbacks para movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .ai-aurora-text,
+  .ai-gradient-text,
+  .ai-shiny-text {
+    animation: none !important;
+    background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ai-text-animate span {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    transition: none !important;
+  }
+}
+
+/* Otimizações de performance para texto */
+.ai-aurora-text,
+.ai-gradient-text,
+.ai-shiny-text {
+  will-change: background-position;
+  contain: layout style;
+}
+
+.ai-text-animate span {
+  will-change: transform, opacity, filter;
+  contain: layout style;
+}
+
+/* Estados de carregamento para texto */
+.ai-text-loading {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%);
+  background-size: 200% 100%;
+  animation: ai-skeleton-loading 1.5s infinite;
+  color: transparent;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .ai-aurora-text,
+  .ai-gradient-text,
+  .ai-shiny-text {
+    background: none !important;
+    -webkit-text-fill-color: unset !important;
+    color: #ffffff !important;
+  }
+}
+
+/* ===================================
+   Sistema de Cards de Projetos
+   ================================== */
+
+/* Magic Card Base */
+.ai-magic-card-container {
+  position: relative;
+  border-radius: var(--ai-magic-border-radius);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--ai-magic-hover-duration) ease;
+}
+
+.ai-magic-card-wrapper {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--ai-magic-bg-card);
+  backdrop-filter: blur(10px);
+  border-radius: inherit;
+}
+
+.ai-magic-card-border {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  opacity: 0;
+  transition: opacity var(--ai-magic-hover-duration) ease;
+  z-index: 1;
+}
+
+.ai-magic-card-background {
+  position: absolute;
+  inset: 1px;
+  background: var(--ai-magic-bg-card);
+  border-radius: calc(var(--ai-magic-border-radius) - 1px);
+  z-index: 2;
+}
+
+.ai-magic-card-spotlight {
+  position: absolute;
+  inset: 1px;
+  border-radius: calc(var(--ai-magic-border-radius) - 1px);
+  opacity: 0;
+  transition: opacity var(--ai-magic-hover-duration) ease;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.ai-magic-card-content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+
+/* Magic Card States */
+.ai-magic-card-container:hover,
+.ai-magic-card-container.ai-magic-card-hover {
+  transform: translateY(-5px);
+}
+
+.ai-magic-card-container:hover .ai-magic-card-border,
+.ai-magic-card-container.ai-magic-card-hover .ai-magic-card-border {
+  opacity: 1;
+}
+
+.ai-magic-card-container:hover .ai-magic-card-spotlight,
+.ai-magic-card-container.ai-magic-card-hover .ai-magic-card-spotlight {
+  opacity: 1;
+}
+
+.ai-magic-card-container.ai-magic-card-focus {
+  outline: 2px solid var(--ai-magic-gradient-from);
+  outline-offset: 2px;
+}
+
+/* Border Beam Animation */
+@keyframes ai-border-beam-animation {
+  0% {
+    offset-distance: 0%;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    offset-distance: 100%;
+    opacity: 0;
+  }
+}
+
+.ai-border-beam-container {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.ai-border-beam {
+  offset-path: rect(0 auto auto 0 round var(--ai-magic-border-radius));
+  offset-distance: 0%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  filter: blur(2px);
+  opacity: 0;
+}
+
+/* Neon Gradient Card */
+.ai-neon-gradient-card {
+  position: relative;
+  border-radius: var(--border-radius, 20px);
+  padding: var(--border-size, 2px);
+  background: linear-gradient(0deg, var(--neon-first-color), var(--neon-second-color));
+  background-size: 100% 200%;
+  animation: ai-neon-background-spin 3s linear infinite;
+}
+
+.ai-neon-before,
+.ai-neon-after {
+  position: absolute;
+  inset: calc(-1 * var(--border-size, 2px));
+  border-radius: var(--border-radius, 20px);
+  background: linear-gradient(0deg, var(--neon-first-color), var(--neon-second-color));
+  background-size: 100% 200%;
+  animation: ai-neon-background-spin 3s linear infinite;
+  z-index: -1;
+}
+
+.ai-neon-after {
+  filter: blur(20px);
+  opacity: 0.8;
+}
+
+@keyframes ai-neon-background-spin {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 0% 200%; }
+}
+
+.ai-neon-gradient-card.ai-neon-active .ai-neon-before,
+.ai-neon-gradient-card.ai-neon-active .ai-neon-after {
+  animation-play-state: running;
+}
+
+/* Project Card Específico */
+.ai-project-card {
+  height: var(--ai-magic-card-height);
+  border-radius: var(--ai-magic-border-radius);
+  background: var(--ai-magic-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--ai-magic-hover-duration) ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.ai-project-card--featured {
+  border: none;
+  background: transparent;
+}
+
+.ai-project-card:hover,
+.ai-project-card.ai-project-card-hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(158, 122, 255, 0.2);
+}
+
+.ai-project-card--featured:hover,
+.ai-project-card--featured.ai-project-card-hover {
+  box-shadow: 0 20px 40px rgba(255, 0, 170, 0.3);
+}
+
+/* Project Card Content */
+.ai-project-card .project-card__content {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.ai-project-card .project-card__badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 15;
+  padding: 0.25rem 0.75rem;
+  background: rgba(158, 122, 255, 0.9);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.ai-project-card .project-card__image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.ai-project-card .project-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--ai-magic-hover-duration) ease;
+}
+
+.ai-project-card:hover .project-card__image img {
+  transform: scale(1.05);
+}
+
+.ai-project-card .project-card__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ai-magic-text-primary);
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.ai-project-card .project-card__description {
+  font-size: 0.9rem;
+  color: var(--ai-magic-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  flex-grow: 1;
+}
+
+.ai-project-card .project-card__stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.ai-project-card .stat {
+  text-align: center;
+  flex: 1;
+}
+
+.ai-project-card .stat__value {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ai-magic-gradient-from);
+  margin-bottom: 0.25rem;
+}
+
+.ai-project-card .stat__label {
+  font-size: 0.7rem;
+  color: var(--ai-magic-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ai-project-card .project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.ai-project-card .tag {
+  padding: 0.25rem 0.5rem;
+  background: rgba(158, 122, 255, 0.2);
+  border: 1px solid rgba(158, 122, 255, 0.3);
+  border-radius: 12px;
+  font-size: 0.7rem;
+  color: var(--ai-magic-text-primary);
+  backdrop-filter: blur(5px);
+}
+
+.ai-project-card .project-card__actions {
+  margin-top: auto;
+}
+
+.ai-project-card .btn-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ai-magic-gradient-from);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--ai-magic-hover-duration) ease;
+  padding: 0.5rem 0;
+}
+
+.ai-project-card .btn-link:hover {
+  color: var(--ai-magic-gradient-to);
+  transform: translateX(5px);
+}
+
+.ai-project-card .btn-link svg {
+  transition: transform var(--ai-magic-hover-duration) ease;
+}
+
+.ai-project-card .btn-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Fallback para cards sem JavaScript */
+.ai-magic-card-fallback {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(158, 122, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ai-magic-card-fallback:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(158, 122, 255, 0.2);
+}
+
+/* Responsividade para cards */
+@media (max-width: 768px) {
+  .ai-project-card {
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .ai-project-card .project-card__content {
+    padding: 1.25rem;
+  }
+  
+  .ai-project-card .project-card__image {
+    height: 150px;
+  }
+  
+  .ai-project-card .project-card__stats {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .ai-project-card .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .ai-project-card .stat__value {
+    margin-bottom: 0;
+  }
+}
+
+/* Otimizações de performance para cards */
+.ai-project-card,
+.ai-magic-card-container {
+  will-change: transform;
+  contain: layout style paint;
+  transform: translateZ(0);
+}
+
+.ai-magic-card-spotlight,
+.ai-border-beam {
+  will-change: opacity, background-position;
+  contain: layout style;
+}
+
+/* Estados de carregamento para cards */
+.ai-project-card.loading {
+  pointer-events: none;
+}
+
+.ai-project-card.loading .project-card__content {
+  opacity: 0.5;
+}
+
+/* Navegação por teclado aprimorada */
+.ai-project-card:focus {
+  outline: 2px solid var(--ai-magic-gradient-from);
+  outline-offset: 4px;
+  transform: translateY(-5px);
+}
+
+.ai-project-card:focus-visible {
+  outline: 2px solid var(--ai-magic-gradient-from);
+  outline-offset: 4px;
+}
+
+/* Skip links para navegação rápida */
+.ai-projects-section .skip-to-cards {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--ai-magic-gradient-from);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.ai-projects-section .skip-to-cards:focus {
+  top: 1rem;
+}
+
+/* Indicadores de interatividade */
+.ai-project-card[tabindex="0"]::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  width: 8px;
+  height: 8px;
+  background: var(--ai-magic-gradient-from);
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 20;
+}
+
+.ai-project-card:focus::before,
+.ai-project-card:hover::before {
+  opacity: 1;
+}
+
+/* Melhorias de acessibilidade */
+.ai-project-card[aria-expanded="true"] {
+  box-shadow: 0 0 0 3px rgba(158, 122, 255, 0.3);
+}
+
+/* Suporte a motion reduzido para navegação */
+@media (prefers-reduced-motion: reduce) {
+  .ai-project-card:focus,
+  .ai-project-card:hover {
+    transform: none;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 0 0 2px var(--ai-magic-gradient-from);
+  }
+}
+
+/* ===================================
+   Componentes Interativos
+   ================================== */
+
+/* Cool Mode Particles */
+@keyframes ai-cool-mode-float {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--rotation, 0deg)) scale(0);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(var(--rotation, 0deg)) scale(1);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(
+      calc(-50% + var(--speed-horz, 0px)), 
+      calc(-50% - var(--speed-up, 50px))
+    ) rotate(calc(var(--rotation, 0deg) + var(--rotation-speed, 360deg))) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(
+      calc(-50% + var(--speed-horz, 0px)), 
+      calc(-50% - var(--speed-up, 50px))
+    ) rotate(calc(var(--rotation, 0deg) + var(--rotation-speed, 360deg))) scale(0);
+  }
+}
+
+.ai-cool-mode-particle {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 10000;
+  will-change: transform, opacity;
+}
+
+/* Shimmer Button Effects */
+@keyframes ai-shimmer-slide {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.ai-shimmer-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  border-radius: var(--ai-magic-border-radius);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  font-weight: 600;
+  transition: all var(--ai-magic-hover-duration) ease;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.ai-shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%);
+  animation: ai-shimmer-slide 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.ai-shimmer-highlight {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    transparent 50%, 
+    rgba(255, 255, 255, 0.05) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--ai-magic-hover-duration) ease;
+}
+
+.ai-shimmer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(158, 122, 255, 0.3);
+}
+
+.ai-shimmer-button:hover .ai-shimmer-highlight {
+  opacity: 1;
+}
+
+.ai-shimmer-button:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+/* Interactive Button Base */
+.ai-interactive-button {
+  position: relative;
+  transition: all var(--ai-magic-hover-duration) ease;
+  cursor: pointer;
+}
+
+.ai-interactive-button:focus {
+  outline: 2px solid rgba(158, 122, 255, 0.5);
+  outline-offset: 2px;
+}
+
+/* Estilos específicos para diferentes tipos de botão */
+.ai-interactive-button.btn-link {
+  background: none;
+  border: none;
+  color: var(--ai-magic-gradient-from);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all var(--ai-magic-hover-duration) ease;
+}
+
+.ai-interactive-button.btn-link:hover {
+  color: var(--ai-magic-gradient-to);
+  transform: translateX(5px);
+}
+
+.ai-interactive-button.btn--primary {
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  border: none;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ai-magic-border-radius);
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.ai-interactive-button.btn--secondary {
+  background: linear-gradient(45deg, var(--ai-magic-gradient-accent), var(--ai-magic-gradient-from));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ai-magic-border-radius);
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+/* Efeitos de hover para botões interativos */
+.ai-interactive-button:hover {
+  transform: translateY(-2px);
+}
+
+.ai-interactive-button.btn--primary:hover,
+.ai-interactive-button.btn--secondary:hover {
+  box-shadow: 0 10px 25px rgba(158, 122, 255, 0.3);
+}
+
+/* Estados de loading para botões */
+.ai-interactive-button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.ai-interactive-button.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: ai-button-spin 1s linear infinite;
+}
+
+@keyframes ai-button-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Ripple effect para feedback tátil */
+.ai-interactive-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ai-interactive-button:active::before {
+  width: 100%;
+  height: 100%;
+}
+
+/* Melhorias para acessibilidade */
+.ai-interactive-button[aria-pressed="true"] {
+  background: var(--ai-magic-gradient-to);
+}
+
+.ai-interactive-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.ai-interactive-button:disabled:hover {
+  box-shadow: none !important;
+}
+
+/* Responsividade para componentes interativos */
+@media (max-width: 768px) {
+  .ai-shimmer-button,
+  .ai-interactive-button {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .ai-cool-mode-particle {
+    font-size: 14px !important;
+  }
+}
+
+/* Otimizações de performance */
+.ai-shimmer-effect,
+.ai-cool-mode-particle {
+  will-change: transform, opacity;
+  contain: layout style paint;
+}
+
+.ai-shimmer-button,
+.ai-interactive-button {
+  will-change: transform;
+  contain: layout style;
+}
+
+/* Movimento reduzido para componentes interativos */
+@media (prefers-reduced-motion: reduce) {
+  .ai-shimmer-effect {
+    animation: none !important;
+  }
+  
+  .ai-cool-mode-particle {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  
+  .ai-interactive-button:hover {
+    transform: none !important;
+  }
+  
+  .ai-shimmer-button:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode para componentes interativos */
+@media (prefers-contrast: high) {
+  .ai-shimmer-button,
+  .ai-interactive-button {
+    border: 2px solid white !important;
+    background: black !important;
+    color: white !important;
+  }
+  
+  .ai-shimmer-effect {
+    display: none !important;
+  }
+}
+
+/* ===================================
+   Componentes Interativos
+   ================================== */
+
+/* Cool Mode Particles */
+@keyframes ai-cool-mode-float {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(var(--speed-horz), calc(var(--speed-up) * -0.5)) rotate(180deg) scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(calc(var(--speed-horz) * 1.5), calc(var(--speed-up) * -1)) rotate(360deg) scale(0.5);
+  }
+}
+
+.ai-cool-mode-particle {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  font-weight: bold;
+  text-shadow: 0 0 10px currentColor;
+  filter: drop-shadow(0 0 5px currentColor);
+}
+
+/* Container global para Cool Mode */
+#ai-cool-mode-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Shimmer Button */
+.ai-shimmer-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ai-magic-hover-duration) ease;
+}
+
+.ai-shimmer-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(158, 122, 255, 0.3);
+}
+
+.ai-shimmer-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    transparent 100%);
+  transform: skewX(-20deg);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Pulsating Button */
+@keyframes ai-pulse-animation {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+  }
+}
+
+.ai-pulsating-button {
+  position: relative;
+}
+
+.ai-pulse-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Estilos para botões da seção IA */
+.ai-projects-section .btn--primary,
+.ai-projects-section .btn--secondary {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  border: 2px solid transparent;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all var(--ai-magic-hover-duration) ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.ai-projects-section .btn--secondary {
+  background: transparent;
+  border: 2px solid var(--ai-magic-gradient-from);
+  color: var(--ai-magic-gradient-from);
+}
+
+.ai-projects-section .btn--primary:hover,
+.ai-projects-section .btn--secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(158, 122, 255, 0.4);
+}
+
+.ai-projects-section .btn--secondary:hover {
+  background: var(--ai-magic-gradient-from);
+  color: white;
+}
+
+/* Links de projeto com Cool Mode */
+.ai-projects-section .btn-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ai-magic-gradient-from);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all var(--ai-magic-hover-duration) ease;
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.ai-projects-section .btn-link:hover {
+  color: var(--ai-magic-gradient-to);
+  transform: translateX(5px);
+}
+
+.ai-projects-section .btn-link svg {
+  transition: transform var(--ai-magic-hover-duration) ease;
+}
+
+.ai-projects-section .btn-link:hover svg {
+  transform: translateX(3px);
+}
+
+/* Badges interativos */
+.ai-projects-section .section-badge,
+.ai-projects-section .project-card__badge {
+  position: relative;
+  cursor: pointer;
+  transition: all var(--ai-magic-hover-duration) ease;
+}
+
+.ai-projects-section .section-badge:hover,
+.ai-projects-section .project-card__badge:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(158, 122, 255, 0.3);
+}
+
+/* Estados de foco para acessibilidade */
+.ai-shimmer-button:focus,
+.ai-pulsating-button:focus,
+.ai-projects-section .btn-link:focus {
+  outline: 2px solid var(--ai-magic-gradient-from);
+  outline-offset: 2px;
+}
+
+/* Otimizações de performance */
+.ai-cool-mode-particle,
+.ai-shimmer-effect,
+.ai-pulse-effect {
+  will-change: transform, opacity;
+  contain: layout style;
+}
+
+/* Responsividade para componentes interativos */
+@media (max-width: 768px) {
+  .ai-projects-section .btn--primary,
+  .ai-projects-section .btn--secondary {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .ai-cool-mode-particle {
+    font-size: 16px !important;
+  }
+}
+
+/* Redução de movimento */
+@media (prefers-reduced-motion: reduce) {
+  .ai-cool-mode-particle {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  
+  .ai-shimmer-effect {
+    display: none !important;
+  }
+  
+  .ai-pulse-effect {
+    animation: none !important;
+    opacity: 0.3 !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+  }
+  
+  .ai-shimmer-button:hover,
+  .ai-pulsating-button:hover,
+  .ai-projects-section .btn-link:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .ai-shimmer-button,
+  .ai-projects-section .btn--primary {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 2px solid #000000 !important;
+  }
+  
+  .ai-projects-section .btn--secondary {
+    background: transparent !important;
+    color: #ffffff !important;
+    border: 2px solid #ffffff !important;
+  }
+  
+  .ai-projects-section .btn-link {
+    color: #ffffff !important;
+  }
+}
+
+/* Movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  .ai-project-card,
+  .ai-magic-card-container {
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .ai-border-beam {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  
+  .ai-neon-gradient-card .ai-neon-before,
+  .ai-neon-gradient-card .ai-neon-after {
+    animation: none !important;
+  }
+}
+
+/* Camada de conteúdo */
+.ai-projects-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Grid de projetos */
+.ai-projects-grid,
+.projects__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(var(--ai-magic-card-size), 1fr));
+  gap: var(--ai-magic-card-gap);
+  margin-top: 3rem;
+  padding: 0;
+}
+
+/* Layout responsivo específico */
+@media (min-width: 1200px) {
+  .ai-projects-grid,
+  .projects__grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .ai-projects-grid,
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ai-projects-grid,
+  .projects__grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Estilos base para Magic Cards */
+.ai-magic-card {
+  height: var(--ai-magic-card-height);
+  border-radius: var(--ai-magic-border-radius);
+  background: var(--ai-magic-bg-card);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform var(--ai-magic-hover-duration) ease;
+  cursor: pointer;
+}
+
+.ai-magic-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilos para títulos com efeitos Magic UI */
+.ai-magic-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.ai-magic-subtitle {
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+/* Estilos para estatísticas */
+.ai-statistics-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--ai-magic-border-radius);
+  backdrop-filter: blur(10px);
+}
+
+.ai-statistic-item {
+  text-align: center;
+  padding: 1rem;
+}
+
+.ai-statistic-number {
+  font-size: clamp(2rem, 3vw, 3rem);
+  font-weight: 700;
+  color: var(--ai-magic-gradient-from);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ai-statistic-label {
+  font-size: 0.9rem;
+  color: var(--ai-magic-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para botões interativos */
+.ai-magic-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(45deg, var(--ai-magic-gradient-from), var(--ai-magic-gradient-to));
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--ai-magic-hover-duration) ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-magic-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(158, 122, 255, 0.3);
+}
+
+/* Estilos para links de projeto */
+.ai-project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--ai-magic-gradient-from);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--ai-magic-hover-duration) ease;
+}
+
+.ai-project-link:hover {
+  color: var(--ai-magic-gradient-to);
+}
+
+/* Estilos para tags de tecnologia */
+.ai-tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.ai-tech-tag {
+  padding: 0.25rem 0.75rem;
+  background: rgba(158, 122, 255, 0.2);
+  border: 1px solid rgba(158, 122, 255, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--ai-magic-text-primary);
+  backdrop-filter: blur(5px);
+}
+
+/* Animações personalizadas para Magic UI */
+@keyframes ai-float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes ai-pulse-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(158, 122, 255, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(158, 122, 255, 0.6);
+  }
+}
+
+@keyframes ai-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Classes utilitárias para animações */
+.ai-animate-float {
+  animation: ai-float 3s ease-in-out infinite;
+}
+
+.ai-animate-pulse-glow {
+  animation: ai-pulse-glow 2s ease-in-out infinite;
+}
+
+.ai-animate-gradient {
+  background-size: 200% 200%;
+  animation: ai-gradient-shift 3s ease infinite;
+}
+
+/* Estilos para estados de carregamento */
+.ai-loading-skeleton {
+  background: linear-gradient(90deg, 
+    rgba(255, 255, 255, 0.1) 25%, 
+    rgba(255, 255, 255, 0.2) 50%, 
+    rgba(255, 255, 255, 0.1) 75%);
+  background-size: 200% 100%;
+  animation: ai-skeleton-loading 1.5s infinite;
+}
+
+@keyframes ai-skeleton-loading {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Estilos para acessibilidade */
+.ai-projects-section:focus-within .ai-magic-card {
+  outline: 2px solid var(--ai-magic-gradient-from);
+  outline-offset: 2px;
+}
+
+/* Suporte para high contrast mode */
+@media (prefers-contrast: high) {
+  :root {
+    --ai-magic-text-primary: #ffffff;
+    --ai-magic-text-secondary: #ffffff;
+    --ai-magic-bg-card: #000000;
+    --ai-magic-border-color: #ffffff;
+  }
+  
+  .ai-magic-card {
+    border: 2px solid white;
+  }
+}
+
+/* Otimizações de performance */
+.ai-projects-section * {
+  will-change: auto;
+}
+
+.ai-projects-section .magic-card,
+.ai-projects-section .particles,
+.ai-projects-section .meteors {
+  contain: layout style paint;
+  transform: translateZ(0);
+}
+
+/* Print styles */
+@media print {
+  .ai-projects-background,
+  .particles,
+  .meteors {
+    display: none !important;
+  }
+  
+  .ai-projects-section {
+    background: white !important;
+    color: black !important;
+  }
+}
