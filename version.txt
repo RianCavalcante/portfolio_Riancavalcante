@@ -1,5 +1,5 @@
-Version: 2.0.0
-Build: 2025-01-18-v2
+Version: 2.1.0
+Build: 2025-01-18-v3-magic-ui
 Status: Updated with fixes
 Changes:
 - Cards menores
