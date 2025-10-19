@@ -421,3 +421,63 @@ function throttle(func, limit) {
         }
     };
 }
+
+// ========================================
+// MAGIC UI PARTICLES EFFECT
+// ========================================
+
+function createParticles() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+    
+    const particleCount = 50;
+    
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // Posição aleatória
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = Math.random() * 100 + '%';
+        
+        // Tamanho aleatório
+        const size = Math.random() * 3 + 1;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        
+        // Delay aleatório
+        particle.style.animationDelay = Math.random() * 6 + 's';
+        
+        container.appendChild(particle);
+    }
+}
+
+// ========================================
+// MAGIC CARD MOUSE TRACKING
+// ========================================
+
+function initMagicCards() {
+    const magicCards = document.querySelectorAll('.magic-card');
+    
+    magicCards.forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty('--mouse-x', x + 'px');
+            card.style.setProperty('--mouse-y', y + 'px');
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.setProperty('--mouse-x', '0px');
+            card.style.setProperty('--mouse-y', '0px');
+        });
+    });
+}
+
+// Inicializar efeitos Magic UI
+document.addEventListener('DOMContentLoaded', function() {
+    createParticles();
+    initMagicCards();
+});
