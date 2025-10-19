@@ -1,0 +1,8 @@
+Version: 2.0.0
+Build: 2025-01-18-v2
+Status: Updated with fixes
+Changes:
+- Cards menores
+- Botão visível
+- CSS simplificado
+- Grid responsivo
