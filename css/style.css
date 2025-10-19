@@ -1515,3 +1515,112 @@ footer p {
         margin-bottom: 0;
     }
 }
+
+
+/* ========================================
+   MELHORIAS SEÇÃO PROGRAMAÇÃO - ADICIONADO 2025
+   ======================================== */
+
+/* Badge da seção dev */
+.section-badge--dev {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+}
+
+/* Seção Programação com background especial */
+.projects--programming {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.projects--programming::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 30% 40%, rgba(255, 107, 107, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 60%, rgba(255, 142, 83, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Cards de Dev com efeito especial */
+.project-card--dev {
+    border: 2px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(135deg, #FF6B6B, #FF8E53) border-box;
+    position: relative;
+}
+
+.project-card--dev::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(255, 142, 83, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    border-radius: var(--radius-xl);
+}
+
+.project-card--dev:hover::after {
+    opacity: 1;
+}
+
+/* Badges especiais para Dev */
+.project-card__badge--web {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+}
+
+.project-card__badge--api {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+}
+
+.project-card__badge--cli {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+}
+
+/* Tags especiais para Dev */
+.tag--web {
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    color: white;
+}
+
+.tag--api {
+    background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%);
+    color: white;
+}
+
+.tag--cli {
+    background: linear-gradient(135deg, #fdcb6e 0%, #e17055 100%);
+    color: white;
+}
+
+.tag--web:hover,
+.tag--api:hover,
+.tag--cli:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Título com gradiente para Dev */
+.project-card--dev .project-card__title {
+    background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Borda especial para cards de programação */
+.project-card--programming {
+    border-left: 4px solid var(--color-secondary);
+}
+
+.project-card--programming:hover {
+    border-left-color: var(--color-secondary-dark);
+}
