@@ -1,0 +1,141 @@
+/* Magic UI Effects - Portfolio Rian Cavalcante */
+
+/* Shimmer Button Effect */
+.btn--shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn--shimmer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.6s;
+}
+
+.btn--shimmer:hover::before {
+    left: 100%;
+}
+
+/* Border Beam Effect */
+.border-beam {
+    position: relative;
+}
+
+.border-beam::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(45deg, #ffaa40, #9c40ff, #ffaa40);
+    background-size: 200% 200%;
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    animation: border-beam 3s linear infinite;
+    z-index: -1;
+}
+
+@keyframes border-beam {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Particles Background */
+.particles-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: rgba(232, 184, 109, 0.8);
+    border-radius: 50%;
+    animation: float-particle 8s ease-in-out infinite;
+}
+
+@keyframes float-particle {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0;
+    }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    50% {
+        transform: translateY(-120px) translateX(60px);
+    }
+}
+
+/* Animated Gradient Text */
+.gradient-text-animated {
+    background: linear-gradient(45deg, #3A556B, #E8B86D, #3A556B, #E8B86D);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradient-shift 4s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Dot Pattern */
+.dot-pattern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(232, 184, 109, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    animation: dot-move 20s linear infinite;
+    z-index: 0;
+}
+
+@keyframes dot-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 30px 30px; }
+}
+
+/* Neon Glow Effect */
+.neon-glow {
+    animation: neon-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from {
+        box-shadow: 
+            0 0 5px currentColor,
+            0 0 10px currentColor,
+            0 0 15px currentColor;
+    }
+    to {
+        box-shadow: 
+            0 0 2px currentColor,
+            0 0 5px currentColor,
+            0 0 8px currentColor;
+    }
+}
+
+/* Ensure hero content is above effects */
+.hero__container {
+    position: relative;
+    z-index: 2;
+}
