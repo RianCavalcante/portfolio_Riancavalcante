@@ -1,0 +1,388 @@
+/* Estilos adicionais para o redesign */
+
+.btn-premium {
+    background-color: #58a6ff1a;
+    border: 1px solid #58a6ff;
+    color: #58a6ff;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-premium:hover {
+    color: #0d1117;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+}
+
+body.light-mode .btn-premium:hover { 
+    color: #ffffff; 
+}
+
+.btn-premium::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #58a6ff;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.btn-premium:hover::before {
+    width: 100%;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 1.2rem;
+    background-color: #58a6ff;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to { background-color: transparent }
+    50% { background-color: #58a6ff; }
+}
+
+.skill-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card > * {
+    position: relative;
+    z-index: 2;
+}
+
+.card-spotlight {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: radial-gradient(circle at var(--mouse-x) var(--mouse-y), rgba(88, 166, 255, 0.15), rgba(88, 166, 255, 0.05), transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.skill-card:hover .card-spotlight {
+    opacity: 1;
+}
+
+body.light-mode .skill-card {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+body.light-mode .skill-card:hover { 
+    box-shadow: 0 10px 30px rgba(88, 166, 255, 0.2); 
+}
+
+body.light-mode .skill-card h3 { 
+    color: #111827; 
+}
+
+body.light-mode .skill-card p { 
+    color: #6b7280; 
+}
+
+.project-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05);
+}
+
+.project-image {
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.project-image img {
+    transition: transform 0.4s ease;
+}
+
+body.light-mode .project-card {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #58a6ff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .project-card p { 
+    color: #4b5563; 
+}
+
+/* Estilos dos ícones de contato */
+.footer-icon {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #30363d;
+    z-index: 1;
+    transition: all 0.5s ease;
+}
+
+.footer-icon svg {
+    position: relative;
+    z-index: 3;
+    transition: all 0.5s ease;
+}
+
+.footer-icon:hover svg {
+    color: #ffffff;
+    transform: rotateY(360deg);
+}
+
+.footer-icon::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+}
+
+.footer-icon:hover::before {
+    top: 0;
+}
+
+.footer-icon[title="Email"]::before { 
+    background: #58a6ff; 
+}
+
+.footer-icon[title="LinkedIn"]::before { 
+    background: #0077b5; 
+}
+
+.footer-icon[title="WhatsApp"]::before { 
+    background: #25D366; 
+}
+
+.footer-icon[title="GitHub"]::before { 
+    background: #333; 
+}
+
+body.light-mode .footer-icon { 
+    border-color: #d1d5db;
+}
+
+body.light-mode .footer-icon svg { 
+    color: #4b5563; 
+}
+
+body.light-mode p, 
+body.light-mode .text-gray-400 { 
+    color: #4b5563; 
+}
+
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3 { 
+    color: #111827; 
+}
+
+body.light-mode .text-gray-500 { 
+    color: #6b7280; 
+}
+
+body.light-mode .border-gray-800 { 
+    border-color: #e5e7eb; 
+}
+
+body.light-mode .bg-\[\#0d1117\] { 
+    background-color: #f0f2f5; 
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#iconCanvas {
+    max-width: 100%;
+    width: 100%;
+}
+
+#theme-toggler {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+#theme-toggler svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.ripple-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(173, 216, 230, 0.5);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+#sun-icon {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+}
+
+#moon-icon {
+    transform: scale(0) rotate(90deg);
+    opacity: 0;
+}
+
+body.light-mode #sun-icon {
+    transform: scale(0) rotate(-90deg);
+    opacity: 0;
+}
+
+body.light-mode #moon-icon {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+}
+
+#details-modal {
+    transition: opacity 0.3s ease;
+}
+
+#details-modal.visible {
+    display: flex;
+}
+
+#modal-content {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+#details-modal.visible #modal-content {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body.light-mode #modal-content {
+    background-color: #ffffff;
+    border-color: #e5e7eb;
+}
+
+.details-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-card:hover .details-btn {
+    border-color: #58a6ff;
+    background-color: rgba(88, 166, 255, 0.1);
+}
+
+#modal-body ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+
+#modal-body li {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+#modal-body li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #58a6ff;
+}
+
+#modal-body h4 {
+    font-weight: 600;
+    color: #c9d1d9;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+body.light-mode #modal-body h4 {
+    color: #111827;
+}
+
+#modal-body img {
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    border: 1px solid #30363d;
+}
+
+.image-blur-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, #161b22 20%, transparent);
+    z-index: 1;
+}
+
+body.light-mode .image-blur-overlay {
+    background: linear-gradient(to top, #ffffff 20%, transparent);
+}
+
+#telemedicine-img {
+    object-position: center 20%;
+}
