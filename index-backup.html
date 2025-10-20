@@ -1,0 +1,1023 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta Tags Essenciais -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Updated: 2025-01-18 -->
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://polyfill.io https://*.vercel-insights.com https://*.vercel-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://*.vercel-insights.com https://*.vercel-analytics.com; frame-ancestors 'none';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    
+    <!-- SEO Meta Tags -->
+    <title>Rian Cavalcante | Desenvolvedor de Automação com IA | Python & Inteligência Artificial</title>
+    <meta name="description" content="Rian Cavalcante, 24 anos, desenvolvedor especializado em automação com inteligência artificial e Python. Soluções B2B para crescimento em grande escala. Fortaleza, CE.">
+    <meta name="keywords" content="Rian Cavalcante, desenvolvedor Python, automação, inteligência artificial, IA, machine learning, chatbot, API, n8n, Make, Zapier, OpenAI, desenvolvedor Fortaleza, automação B2B, freelancer Python">
+    <meta name="author" content="Rian Cavalcante">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Portuguese">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://portfolio-riancavalcante-lxhj.vercel.app">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-riancavalcante-lxhj.vercel.app">
+    <meta property="og:title" content="Rian Cavalcante | Desenvolvedor de Automação com IA">
+    <meta property="og:description" content="Desenvolvedor especializado em automação com inteligência artificial e Python. Soluções B2B para crescimento em grande escala.">
+    <meta property="og:image" content="https://portfolio-riancavalcante-lxhj.vercel.app/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Rian Cavalcante - Desenvolvedor de Automação com IA">
+    <meta property="og:site_name" content="Rian Cavalcante Portfolio">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://portfolio-riancavalcante-lxhj.vercel.app">
+    <meta name="twitter:title" content="Rian Cavalcante | Desenvolvedor de Automação com IA">
+    <meta name="twitter:description" content="Desenvolvedor especializado em automação com inteligência artificial e Python. Soluções B2B para crescimento em grande escala.">
+    <meta name="twitter:image" content="https://portfolio-riancavalcante-lxhj.vercel.app/assets/images/og-image.jpg">
+    <meta name="twitter:image:alt" content="Rian Cavalcante - Desenvolvedor de Automação com IA">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤖</text></svg>">
+    
+    <!-- Preconnect para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.simpleicons.org">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3A556B">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Rian Cavalcante">
+    
+    <!-- Critical CSS Inline -->
+    <style>
+        /* Critical CSS - Above the fold */
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Oxygen,Ubuntu,Cantarell,sans-serif;line-height:1.6;color:#1A1A1A;background-color:#FFFFFF;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}:root{--color-primary:#3A556B;--color-secondary:#E8B86D;--color-dark:#1A1A1A;--color-light:#FFFFFF;--color-gray-200:#E0E0E0;--font-size-base:1rem;--font-size-xl:1.5rem;--font-size-2xl:2rem;--font-size-5xl:3.5rem;--font-weight-semibold:600;--font-weight-bold:700;--font-weight-extrabold:800;--spacing-sm:0.5rem;--spacing-md:1rem;--spacing-lg:1.5rem;--spacing-xl:2rem;--radius-lg:0.5rem;--shadow-md:0 4px 6px -1px rgba(0,0,0,0.1);--transition-base:250ms ease-in-out;--z-index-fixed:1030}.skip-to-content{position:absolute;top:-40px;left:0;background:var(--color-primary);color:var(--color-light);padding:var(--spacing-sm) var(--spacing-md);text-decoration:none;z-index:1070}.skip-to-content:focus{top:0}.navbar{position:fixed;top:0;left:0;right:0;z-index:var(--z-index-fixed);background-color:rgba(26,26,26,0.95);backdrop-filter:blur(10px);box-shadow:var(--shadow-md)}.navbar__container{display:flex;align-items:center;justify-content:space-between;padding:var(--spacing-md);max-width:1280px;margin:0 auto}.navbar__logo{font-size:var(--font-size-xl);font-weight:var(--font-weight-extrabold);color:var(--color-secondary);text-decoration:none}.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--color-primary) 0%,#2A4555 100%);color:var(--color-light)}.hero__content{max-width:800px;margin:0 auto;text-align:center}.hero__title{font-size:var(--font-size-5xl);font-weight:var(--font-weight-extrabold);line-height:1.2;margin-bottom:var(--spacing-md);color:var(--color-light)}.hero__age{display:inline-block;font-size:var(--font-size-xl);color:var(--color-secondary);margin-left:var(--spacing-sm)}.hero__role{font-size:var(--font-size-2xl);font-weight:var(--font-weight-semibold);color:var(--color-secondary);margin-bottom:var(--spacing-lg)}.btn{display:inline-block;padding:var(--spacing-md) var(--spacing-xl);font-size:var(--font-size-base);font-weight:var(--font-weight-semibold);text-align:center;text-decoration:none;border-radius:var(--radius-lg);transition:all var(--transition-base);cursor:pointer;border:2px solid transparent}.btn--primary{background-color:var(--color-primary);color:var(--color-light);box-shadow:var(--shadow-md)}
+    </style>
+    
+    <!-- Correções Críticas -->
+    <style>
+        /* Garantir visibilidade dos botões */
+        .hero__cta, .hero__cta .btn, .btn--secondary {
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+        
+        /* Cards menores */
+        .projects__grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+            gap: 1.5rem !important;
+        }
+        
+        .project-card__image {
+            height: 160px !important;
+        }
+        
+        .project-card__content {
+            padding: 1.5rem !important;
+        }
+        
+        .project-card__title {
+            font-size: 1.25rem !important;
+            margin-bottom: 0.5rem !important;
+        }
+        
+        .project-card__description {
+            font-size: 0.875rem !important;
+            line-height: 1.5 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        /* Desabilitar overlay */
+        .project-card__overlay {
+            display: none !important;
+        }
+        
+        /* Hover mais sutil */
+        .project-card:hover {
+            transform: translateY(-6px) !important;
+        }
+    </style>
+    
+    <!-- Stylesheets - Carregamento assíncrono -->
+    <link rel="stylesheet" href="css/style.css?v=2.1.0">
+    <link rel="stylesheet" href="css/animations.css?v=2.1.0">
+    <link rel="stylesheet" href="css/responsive.css?v=2.1.0">
+    <link rel="stylesheet" href="css/hero-enhanced.css?v=2.1.0">
+    <link rel="stylesheet" href="css/navbar-enhanced.css?v=2.1.0">
+    <link rel="stylesheet" href="css/magic-ui-effects.css?v=2.1.0">
+    <link rel="stylesheet" href="css/ai-projects-magic-ui.css?v=1.0.0">
+
+    
+    <!-- Schema.org Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rian Cavalcante",
+        "alternateName": "Rian Silva",
+        "description": "Desenvolvedor especializado em automação com inteligência artificial e Python",
+        "url": "https://riancavalcante.com",
+        "image": "https://riancavalcante.com/assets/images/profile.jpg",
+        "sameAs": [
+            "https://www.linkedin.com/in/rian-silva-766525196/",
+            "https://github.com/riancavalcante",
+            "https://wa.me/5585991872205"
+        ],
+        "jobTitle": "Desenvolvedor de Automação com IA",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Freelancer"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Fortaleza",
+            "addressRegion": "CE",
+            "addressCountry": "BR"
+        },
+        "email": "riancavalcante505@gmail.com",
+        "telephone": "+5585991872205",
+        "knowsAbout": [
+            "Python",
+            "Inteligência Artificial",
+            "Machine Learning",
+            "Automação de Processos",
+            "n8n",
+            "Make",
+            "Zapier",
+            "OpenAI",
+            "API Development",
+            "PostgreSQL",
+            "Redis"
+        ],
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "FNDL"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Rian Cavalcante Portfolio",
+        "url": "https://riancavalcante.com",
+        "description": "Portfólio profissional de Rian Cavalcante, desenvolvedor especializado em automação com inteligência artificial",
+        "author": {
+            "@type": "Person",
+            "name": "Rian Cavalcante"
+        },
+        "inLanguage": "pt-BR"
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Rian Cavalcante - Serviços de Automação",
+        "description": "Serviços de automação de processos e desenvolvimento com inteligência artificial",
+        "provider": {
+            "@type": "Person",
+            "name": "Rian Cavalcante"
+        },
+        "areaServed": "BR",
+        "serviceType": [
+            "Automação de Processos",
+            "Desenvolvimento com IA",
+            "Integração de APIs",
+            "Consultoria Técnica"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Pular para o conteúdo principal</a>
+    
+    <!-- Navigation -->
+    <nav class="navbar" aria-label="Navegação principal">
+        <div class="navbar__container container">
+            <a href="#hero" class="navbar__logo">RC</a>
+            
+            <button class="navbar__toggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+                <span class="navbar__toggle-icon"></span>
+                <span class="navbar__toggle-icon"></span>
+                <span class="navbar__toggle-icon"></span>
+            </button>
+            
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a href="#hero" class="navbar__link active">Início</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#projetos-ia" class="navbar__link">Projetos IA</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#projetos-programacao" class="navbar__link">Programação</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#sobre" class="navbar__link">Sobre</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#servicos" class="navbar__link">Serviços</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contato" class="navbar__link">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero dot-pattern" aria-label="Apresentação">
+            <div class="particles-bg" id="particles-container"></div>
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <h1 class="hero__title gradient-text-animated">
+                        Rian Cavalcante
+                        <span class="hero__age">24 anos</span>
+                    </h1>
+                    <p class="hero__role">Desenvolvedor de Automação com Inteligência Artificial</p>
+                    <p class="hero__subtitle">
+                        Especialista em <strong>Python</strong> e <strong>automação com IA</strong>, 
+                        transformando processos complexos em soluções inteligentes e eficientes.
+                    </p>
+                    <div class="hero__cta" style="opacity: 1 !important; visibility: visible !important;">
+                        <a href="#projetos-ia" class="btn btn--primary btn--shimmer" style="opacity: 1 !important; visibility: visible !important;">Ver Projetos</a>
+                        <a href="#contato" class="btn btn--secondary btn--shimmer" style="opacity: 1 !important; visibility: visible !important;">Entre em Contato</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Projects with AI Section -->
+        <section id="projetos-ia" class="projects projects--ai ai-projects-section" aria-label="Projetos com Inteligência Artificial">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge ai-shiny-text-auto">🤖 IA & Machine Learning</span>
+                    <h2 class="section-title ai-aurora-text-auto">Projetos com Inteligência Artificial</h2>
+                    <p class="section-subtitle ai-text-animate-auto" data-animation="blurInUp" data-duration="0.8" data-stagger="0.1">Transformando dados em inteligência, automatizando o futuro com soluções de IA de ponta</p>
+                </div>
+                
+                <!-- Estatísticas da seção -->
+                <div class="ai-statistics-container">
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="2000" data-delay="500" data-suffix="+">15</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Projetos Concluídos</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="2500" data-delay="800" data-suffix="+">25</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Tecnologias Utilizadas</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="1800" data-delay="1100">5</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Anos de Experiência</span>
+                    </div>
+                    <div class="ai-statistic-item">
+                        <span class="ai-statistic-number ai-number-ticker-auto" data-duration="3000" data-delay="1400" data-suffix="k+">10</span>
+                        <span class="ai-statistic-label ai-gradient-text-auto">Horas de Automação</span>
+                    </div>
+                </div>
+                
+                <div class="projects__grid">
+                    <!-- Project Card 1 - IA (Featured) -->
+                    <article class="project-card project-card--ai project-card--featured ai-project-card-auto" data-featured="true">
+                        <span class="project-card__badge project-card__badge--ai neon-glow">🚀 IA Conversacional</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad1)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E🤖%3C/text%3E%3C/svg%3E" 
+                                 alt="Assistente Virtual Inteligente com IA" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">💬 Assistente Virtual Inteligente</h3>
+                            <p class="project-card__description">
+                                Chatbot avançado com GPT-4 que entende contexto, aprende com conversas e automatiza 
+                                atendimento 24/7. Reduz tempo de resposta em 90% e aumenta satisfação do cliente.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">90%</span>
+                                    <span class="stat__label">Mais Rápido</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">24/7</span>
+                                    <span class="stat__label">Disponível</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">95%</span>
+                                    <span class="stat__label">Precisão</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--ai">Python</span>
+                                <span class="tag tag--ai">GPT-4</span>
+                                <span class="tag tag--ai">NLP</span>
+                                <span class="tag tag--ai">FastAPI</span>
+                                <span class="tag tag--ai">LangChain</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Solicitar Demo
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 2 - IA -->
+                    <article class="project-card project-card--ai ai-project-card-auto">
+                        <span class="project-card__badge project-card__badge--ml neon-glow">📈 Machine Learning</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad2)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E📊%3C/text%3E%3C/svg%3E" 
+                                 alt="Análise Preditiva com Machine Learning" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">📊 Análise Preditiva Inteligente</h3>
+                            <p class="project-card__description">
+                                Modelos de ML que preveem tendências, identificam padrões ocultos e antecipam 
+                                comportamentos. Decisões baseadas em dados com 85% de precisão.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">85%</span>
+                                    <span class="stat__label">Precisão</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">10x</span>
+                                    <span class="stat__label">Mais Rápido</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">100k+</span>
+                                    <span class="stat__label">Dados/seg</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--ml">Python</span>
+                                <span class="tag tag--ml">TensorFlow</span>
+                                <span class="tag tag--ml">Pandas</span>
+                                <span class="tag tag--ml">Scikit-learn</span>
+                                <span class="tag tag--ml">XGBoost</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Solicitar Análise
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 3 - IA -->
+                    <article class="project-card project-card--ai ai-project-card-auto">
+                        <span class="project-card__badge project-card__badge--automation neon-glow">⚡ Automação IA</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad3' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%233A556B;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad3)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E⚡%3C/text%3E%3C/svg%3E" 
+                                 alt="Automação Inteligente de Processos" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">⚡ Automação Inteligente RPA</h3>
+                            <p class="project-card__description">
+                                RPA com IA que aprende e se adapta. Automatiza processos complexos com visão 
+                                computacional e decisões inteligentes. Economia de 300% em tempo.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">300%</span>
+                                    <span class="stat__label">Eficiência</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">0</span>
+                                    <span class="stat__label">Erros</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">24/7</span>
+                                    <span class="stat__label">Operação</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--automation">Python</span>
+                                <span class="tag tag--automation">OpenCV</span>
+                                <span class="tag tag--automation">RPA</span>
+                                <span class="tag tag--automation">Computer Vision</span>
+                                <span class="tag tag--automation">OCR</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Automatizar Agora
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Programming Projects Section -->
+        <section id="projetos-programacao" class="projects projects--programming" aria-label="Projetos de Programação">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-badge section-badge--dev">💻 Desenvolvimento Full Stack</span>
+                    <h2 class="section-title">Projetos de Programação</h2>
+                    <p class="section-subtitle">Arquiteturas escaláveis, código limpo e soluções enterprise-ready</p>
+                </div>
+                
+                <div class="projects__grid">
+                    <!-- Project Card 1 - Programação -->
+                    <article class="project-card project-card--dev border-beam">
+                        <span class="project-card__badge project-card__badge--web">🌐 Web App</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad4' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2f3f;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad4)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E💻%3C/text%3E%3C/svg%3E" 
+                                 alt="Sistema de Gestão Web Enterprise" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">💻 Sistema de Gestão Enterprise</h3>
+                            <p class="project-card__description">
+                                Plataforma SaaS completa com dashboard real-time, multi-tenancy, controle de acesso 
+                                granular e integrações com +50 APIs. Escalável para milhares de usuários.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">1000+</span>
+                                    <span class="stat__label">Usuários</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">99.9%</span>
+                                    <span class="stat__label">Uptime</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">50+</span>
+                                    <span class="stat__label">APIs</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--web">Python</span>
+                                <span class="tag tag--web">Django</span>
+                                <span class="tag tag--web">PostgreSQL</span>
+                                <span class="tag tag--web">React</span>
+                                <span class="tag tag--web">Redis</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Ver Demo
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 2 - Programação -->
+                    <article class="project-card project-card--dev border-beam">
+                        <span class="project-card__badge project-card__badge--api">🔌 API REST</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad5' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2f3f;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad5)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E🔌%3C/text%3E%3C/svg%3E" 
+                                 alt="API RESTful de Alta Performance" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">🔌 API RESTful de Alta Performance</h3>
+                            <p class="project-card__description">
+                                API ultra-rápida com autenticação JWT, documentação OpenAPI automática, rate limiting 
+                                inteligente e cache distribuído. Suporta 10k+ requisições/segundo.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">10k+</span>
+                                    <span class="stat__label">Req/seg</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">&lt;50ms</span>
+                                    <span class="stat__label">Latência</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">100%</span>
+                                    <span class="stat__label">Documentada</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--api">Python</span>
+                                <span class="tag tag--api">FastAPI</span>
+                                <span class="tag tag--api">Redis</span>
+                                <span class="tag tag--api">Docker</span>
+                                <span class="tag tag--api">Kubernetes</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Ver Docs
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project Card 3 - Programação -->
+                    <article class="project-card project-card--dev border-beam">
+                        <span class="project-card__badge project-card__badge--cli">⚙️ CLI Tool</span>
+                        <div class="project-card__image">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Cdefs%3E%3ClinearGradient id='grad6' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%232A4555;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%231a2f3f;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23grad6)' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='64' fill='%23E8B86D'%3E⚙️%3C/text%3E%3C/svg%3E" 
+                                 alt="Ferramenta CLI Profissional" 
+                                 loading="lazy">
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">⚙️ DevTools CLI Suite</h3>
+                            <p class="project-card__description">
+                                Suite de ferramentas CLI para desenvolvedores com interface rica, auto-complete, 
+                                plugins extensíveis e integração com CI/CD. Publicada no PyPI com 5k+ downloads.
+                            </p>
+                            <div class="project-card__stats">
+                                <div class="stat">
+                                    <span class="stat__value">5k+</span>
+                                    <span class="stat__label">Downloads</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">4.8★</span>
+                                    <span class="stat__label">Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat__value">20+</span>
+                                    <span class="stat__label">Comandos</span>
+                                </div>
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tag tag--cli">Python</span>
+                                <span class="tag tag--cli">Click</span>
+                                <span class="tag tag--cli">Rich</span>
+                                <span class="tag tag--cli">PyPI</span>
+                                <span class="tag tag--cli">Typer</span>
+                            </div>
+                            <div class="project-card__actions">
+                                <a href="#contato" class="btn-link">
+                                    Instalar
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Me Section -->
+        <section id="sobre" class="about" aria-label="Sobre Mim">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p class="section-subtitle">Conheça mais sobre minha trajetória e expertise</p>
+                </div>
+                
+                <div class="about__content">
+                    <!-- Card: Sobre Mim -->
+                    <article class="about__card">
+                        <div class="about__card-header">
+                            <div class="about__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 21V19C20 17.9391 19.5786 16.9217 18.8284 16.1716C18.0783 15.4214 17.0609 15 16 15H8C6.93913 15 5.92172 15.4214 5.17157 16.1716C4.42143 16.9217 4 17.9391 4 19V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about__card-title">👨🏻‍💻 Rian Cavalcante</h3>
+                            <p class="about__card-subtitle">Desenvolvedor de Automações</p>
+                        </div>
+                        <div class="about__card-content">
+                            <p class="about__text">
+                                Me chamo Rian Cavalcante, tenho 24 anos e sou natural de Fortaleza, CE. 
+                                Concluí o ensino médio no FNDL, com o curso técnico em informática. 
+                                Atualmente, estou cursando a linguagem Python e atuando como freelancer.
+                            </p>
+                            <p class="about__text">
+                                Sou um entusiasta da tecnologia e atuo na área de desenvolvedor de automações 
+                                para empresas B2B, com foco principal em crescimento em grande escala.
+                            </p>
+                            <div class="about__social">
+                                <a href="https://wa.me/5585991872205" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Fale comigo no WhatsApp">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                    </svg>
+                                    WhatsApp
+                                </a>
+                                <a href="https://www.linkedin.com/in/rian-silva-766525196" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Conecte-se comigo no LinkedIn">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                    </svg>
+                                    LinkedIn
+                                </a>
+                                <a href="mailto:riancavalcante505@gmail.com?subject=Contato%20pelo%20Portfólio&body=Olá,%20Rian!%20Vi%20seu%20portfólio%20e%20gostaria%20de..." class="social-link" aria-label="Enviar e-mail">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    E-mail
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Card: Tecnologias -->
+                    <article class="about__card about__card--tech">
+                        <div class="about__card-header">
+                            <div class="about__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <h3 class="about__card-title">🤖 Linguagens e Tecnologias</h3>
+                        </div>
+                        <div class="about__card-content">
+                            <div class="tech-grid">
+                                <div class="tech-item" title="Python">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" loading="lazy">
+                                    <span>Python</span>
+                                </div>
+                                <div class="tech-item" title="n8n">
+                                    <img src="https://cdn.simpleicons.org/n8n/EE4F27" alt="n8n" loading="lazy">
+                                    <span>n8n</span>
+                                </div>
+                                <div class="tech-item" title="Make">
+                                    <img src="https://cdn.simpleicons.org/make/6842FF" alt="Make" loading="lazy">
+                                    <span>Make</span>
+                                </div>
+                                <div class="tech-item" title="Zapier">
+                                    <img src="https://cdn.simpleicons.org/zapier/FF4A00" alt="Zapier" loading="lazy">
+                                    <span>Zapier</span>
+                                </div>
+                                <div class="tech-item" title="OpenAI">
+                                    <img src="https://cdn.simpleicons.org/openai/39C09E" alt="OpenAI" loading="lazy">
+                                    <span>OpenAI</span>
+                                </div>
+                                <div class="tech-item" title="Gemini">
+                                    <img src="https://cdn.simpleicons.org/googlegemini/4285F4" alt="Gemini" loading="lazy">
+                                    <span>Gemini</span>
+                                </div>
+                                <div class="tech-item" title="Hostinger">
+                                    <img src="https://cdn.simpleicons.org/hostinger/674CC4" alt="Hostinger" loading="lazy">
+                                    <span>Hostinger</span>
+                                </div>
+                                <div class="tech-item" title="DigitalOcean">
+                                    <img src="https://cdn.simpleicons.org/digitalocean/0080FF" alt="DigitalOcean" loading="lazy">
+                                    <span>DigitalOcean</span>
+                                </div>
+                                <div class="tech-item" title="Supabase">
+                                    <img src="https://cdn.simpleicons.org/supabase/3ECF8E" alt="Supabase" loading="lazy">
+                                    <span>Supabase</span>
+                                </div>
+                                <div class="tech-item" title="Firebase">
+                                    <img src="https://cdn.simpleicons.org/firebase/FFCA28" alt="Firebase" loading="lazy">
+                                    <span>Firebase</span>
+                                </div>
+                                <div class="tech-item" title="PostgreSQL">
+                                    <img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="PostgreSQL" loading="lazy">
+                                    <span>PostgreSQL</span>
+                                </div>
+                                <div class="tech-item" title="Redis">
+                                    <img src="https://cdn.simpleicons.org/redis/DC382D" alt="Redis" loading="lazy">
+                                    <span>Redis</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="servicos" class="services" aria-label="Serviços">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Serviços</h2>
+                    <p class="section-subtitle">Soluções personalizadas para automatizar e escalar seu negócio</p>
+                </div>
+                
+                <div class="services__grid">
+                    <!-- Service Card 1 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16V8C20.9996 7.64927 20.9071 7.30481 20.7315 7.00116C20.556 6.69751 20.3037 6.44536 20 6.27L13 2.27C12.696 2.09446 12.3511 2.00205 12 2.00205C11.6489 2.00205 11.304 2.09446 11 2.27L4 6.27C3.69626 6.44536 3.44398 6.69751 3.26846 7.00116C3.09294 7.30481 3.00036 7.64927 3 8V16C3.00036 16.3507 3.09294 16.6952 3.26846 16.9988C3.44398 17.3025 3.69626 17.5546 4 17.73L11 21.73C11.304 21.9055 11.6489 21.9979 12 21.9979C12.3511 21.9979 12.696 21.9055 13 21.73L20 17.73C20.3037 17.5546 20.556 17.3025 20.7315 16.9988C20.9071 16.6952 20.9996 16.3507 21 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3.27002 6.96L12 12.01L20.73 6.96" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 22.08V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Automação de Processos</h3>
+                        <p class="service-card__description">
+                            Desenvolvimento de automações inteligentes para otimizar processos repetitivos, 
+                            reduzir erros e aumentar a produtividade da sua equipe.
+                        </p>
+                        <ul class="service-card__features">
+                            <li>Integração de sistemas</li>
+                            <li>Workflows automatizados</li>
+                            <li>Redução de custos operacionais</li>
+                        </ul>
+                    </article>
+                    
+                    <!-- Service Card 2 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Soluções com IA</h3>
+                        <p class="service-card__description">
+                            Implementação de inteligência artificial para análise de dados, chatbots inteligentes 
+                            e sistemas de recomendação personalizados.
+                        </p>
+                        <ul class="service-card__features">
+                            <li>Chatbots com NLP</li>
+                            <li>Análise preditiva</li>
+                            <li>Processamento de linguagem</li>
+                        </ul>
+                    </article>
+                    
+                    <!-- Service Card 3 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.7 6.3C15.0314 5.96863 15.4245 5.70644 15.8575 5.52931C16.2905 5.35218 16.7545 5.26367 17.2222 5.26904C17.6899 5.27441 18.1517 5.37353 18.5807 5.56028C19.0096 5.74703 19.3968 6.01777 19.7204 6.35636C20.044 6.69495 20.2977 7.09479 20.4669 7.53217C20.6361 7.96955 20.7175 8.43597 20.7062 8.90532C20.6949 9.37467 20.5911 9.83663 20.4011 10.2648C20.2111 10.693 19.9386 11.0793 19.6 11.4L18.5 12.5L15.5 9.5L16.6 8.4C16.7687 8.23137 16.9696 8.09721 17.1914 8.00532C17.4131 7.91344 17.6513 7.86566 17.8918 7.86466C18.1322 7.86366 18.3708 7.90946 18.5933 7.99945C18.8158 8.08944 19.0178 8.22182 19.1878 8.38904C19.3578 8.55626 19.4926 8.75515 19.5849 8.97606C19.6772 9.19697 19.7252 9.43515 19.7262 9.67559C19.7272 9.91603 19.6812 10.1546 19.5909 10.3763C19.5007 10.598 19.3681 10.7981 19.2 10.967L18.1 12.067" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.3 17.7C8.96863 18.0314 8.57556 18.2936 8.14254 18.4707C7.70951 18.6478 7.24549 18.7363 6.77782 18.731C6.31015 18.7256 5.84833 18.6265 5.41935 18.4397C4.99037 18.253 4.60315 17.9822 4.27959 17.6436C3.95603 17.3051 3.70232 16.9052 3.53313 16.4678C3.36394 16.0305 3.28252 15.564 3.29384 15.0947C3.30516 14.6253 3.40894 14.1634 3.59893 13.7352C3.78892 13.307 4.06142 12.9207 4.4 12.6L5.5 11.5L8.5 14.5L7.4 15.6C7.23137 15.7687 7.03028 15.9029 6.80854 15.9947C6.5868 16.0866 6.34866 16.1344 6.10822 16.1354C5.86778 16.1364 5.62918 16.0906 5.40671 16.0006C5.18424 15.9106 4.98218 15.7782 4.81218 15.611C4.64218 15.4438 4.50741 15.2449 4.41512 15.0239C4.32283 14.803 4.27479 14.5649 4.27379 14.3244C4.27279 14.084 4.31885 13.8454 4.40906 13.6237C4.49928 13.402 4.63193 13.2019 4.8 13.033L5.9 11.933" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M14.5 9.5L9.5 14.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Integração de APIs</h3>
+                        <p class="service-card__description">
+                            Conexão e sincronização de diferentes plataformas e sistemas através de APIs, 
+                            garantindo fluxo de dados eficiente e seguro.
+                        </p>
+                        <ul class="service-card__features">
+                            <li>APIs RESTful</li>
+                            <li>Webhooks e eventos</li>
+                            <li>Sincronização em tempo real</li>
+                        </ul>
+                    </article>
+                    
+                    <!-- Service Card 4 -->
+                    <article class="service-card">
+                        <div class="service-card__icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 21V5C16 4.46957 15.7893 3.96086 15.4142 3.58579C15.0391 3.21071 14.5304 3 14 3H10C9.46957 3 8.96086 3.21071 8.58579 3.58579C8.21071 3.96086 8 4.46957 8 5V21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M16 7H20C20.5304 7 21.0391 7.21071 21.4142 7.58579C21.7893 7.96086 22 8.46957 22 9V19C22 19.5304 21.7893 20.0391 21.4142 20.4142C21.0391 20.7893 20.5304 21 20 21H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M8 7H4C3.46957 7 2.96086 7.21071 2.58579 7.58579C2.21071 7.96086 2 8.46957 2 9V19C2 19.5304 2.21071 20.0391 2.58579 20.4142C2.96086 20.7893 3.46957 21 4 21H8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-card__title">Consultoria Técnica</h3>
+                        <p class="service-card__description">
+                            Análise e planejamento de soluções tecnológicas personalizadas para escalar 
+                            seu negócio B2B com eficiência e segurança.
+                        </p>
+                        <ul class="service-card__features">
+                            <li>Análise de processos</li>
+                            <li>Arquitetura de soluções</li>
+                            <li>Estratégia de crescimento</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="contato" class="contact" aria-label="Contato">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Vamos Conversar!</h2>
+                    <p class="section-subtitle">Entre em contato e vamos transformar suas ideias em realidade</p>
+                </div>
+                
+                <div class="contact__content">
+                    <!-- Contact Form -->
+                    <div class="contact__form-wrapper">
+                        <form class="contact__form" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name" class="form-label">Nome Completo *</label>
+                                <input 
+                                    type="text" 
+                                    id="name" 
+                                    name="name" 
+                                    class="form-input" 
+                                    required 
+                                    minlength="3"
+                                    placeholder="Seu nome completo"
+                                    aria-required="true">
+                                <span class="form-error" id="nameError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email" class="form-label">E-mail *</label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    class="form-input" 
+                                    required
+                                    placeholder="seu@email.com"
+                                    aria-required="true">
+                                <span class="form-error" id="emailError"></span>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject" class="form-label">Assunto</label>
+                                <input 
+                                    type="text" 
+                                    id="subject" 
+                                    name="subject" 
+                                    class="form-input"
+                                    placeholder="Assunto da mensagem">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message" class="form-label">Mensagem *</label>
+                                <textarea 
+                                    id="message" 
+                                    name="message" 
+                                    class="form-textarea" 
+                                    required 
+                                    minlength="10"
+                                    rows="5"
+                                    placeholder="Conte-me sobre seu projeto..."
+                                    aria-required="true"></textarea>
+                                <span class="form-error" id="messageError"></span>
+                            </div>
+                            
+                            <button type="submit" class="btn btn--primary btn--full">
+                                Enviar Mensagem
+                            </button>
+                            
+                            <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="contact__info">
+                        <div class="contact__info-card">
+                            <h3 class="contact__info-title">Outras formas de contato</h3>
+                            <p class="contact__info-text">
+                                Prefere outro canal? Entre em contato diretamente através das opções abaixo:
+                            </p>
+                            
+                            <div class="contact__links">
+                                <a href="mailto:riancavalcante505@gmail.com" class="contact__link" target="_blank" rel="noopener noreferrer">
+                                    <div class="contact__link-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <path d="M22 6L12 13L2 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact__link-content">
+                                        <span class="contact__link-label">E-mail</span>
+                                        <span class="contact__link-value">riancavalcante505@gmail.com</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://wa.me/5585991872205" class="contact__link" target="_blank" rel="noopener noreferrer">
+                                    <div class="contact__link-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact__link-content">
+                                        <span class="contact__link-label">WhatsApp</span>
+                                        <span class="contact__link-value">+55 85 99187-2205</span>
+                                    </div>
+                                </a>
+                                
+                                <a href="https://www.linkedin.com/in/rian-silva-766525196/" class="contact__link" target="_blank" rel="noopener noreferrer">
+                                    <div class="contact__link-icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="contact__link-content">
+                                        <span class="contact__link-label">LinkedIn</span>
+                                        <span class="contact__link-value">Rian Silva</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rian Cavalcante. Todos os direitos reservados.</p>
+    </footer>
+    
+    <!-- Browser Detection (opcional - descomentar se necessário) -->
+    <!-- <script src="js/browser-detect.js"></script> -->
+    
+    <!-- Polyfill para Intersection Observer (navegadores antigos) -->
+    <script>
+        if (!('IntersectionObserver' in window)) {
+            document.write('<script src="https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserver"><\/script>');
+        }
+    </script>
+    
+    <!-- Scripts - Carregamento otimizado com defer -->
+    <script src="js/smooth-scroll.js?v=2.1.0" defer></script>
+    <script src="js/form-validation.js?v=2.1.0" defer></script>
+    <script src="js/main.js?v=2.1.0" defer></script>
+    <script src="js/enhanced-features.js?v=2.1.0" defer></script>
+    
+    <!-- Performance Monitoring (opcional - descomentar em produção) -->
+    <!--
+    <script>
+        // Web Vitals monitoring
+        if ('PerformanceObserver' in window) {
+            // Monitor LCP
+            new PerformanceObserver((list) => {
+                const entries = list.getEntries();
+                const lastEntry = entries[entries.length - 1];
+                console.log('LCP:', lastEntry.renderTime || lastEntry.loadTime);
+            }).observe({entryTypes: ['largest-contentful-paint']});
+            
+            // Monitor FID
+            new PerformanceObserver((list) => {
+                list.getEntries().forEach((entry) => {
+                    console.log('FID:', entry.processingStart - entry.startTime);
+                });
+            }).observe({entryTypes: ['first-input']});
+            
+            // Monitor CLS
+            let clsScore = 0;
+            new PerformanceObserver((list) => {
+                list.getEntries().forEach((entry) => {
+                    if (!entry.hadRecentInput) {
+                        clsScore += entry.value;
+                        console.log('CLS:', clsScore);
+                    }
+                });
+            }).observe({entryTypes: ['layout-shift']});
+        }
+    </script>
+    -->
+    
+    <!-- AI Projects Configuration -->
+    <script src="js/ai-projects-config.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Performance Monitor -->
+    <script src="js/ai-projects-performance.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Particles Component -->
+    <script src="js/ai-particles-component.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Meteors Component -->
+    <script src="js/ai-meteors-component.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Text Components -->
+    <script src="js/ai-text-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Magic Card Components -->
+    <script src="js/ai-magic-card-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Interactive Components -->
+    <script src="js/ai-interactive-components.js?v=1.0.0"></script>
+    
+    <!-- AI Projects Interactive Components -->
+    <script src="js/ai-interactive-components.js?v=1.0.0"></script>
+    
+    <!-- Vercel Analytics -->
+    <script defer src="/_vercel/insights/script.js"></script>
+    
+    <!-- Vercel Speed Insights -->
+    <script>
+        window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</body>
+</html>
